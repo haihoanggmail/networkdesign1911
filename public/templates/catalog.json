@@ -509,6 +509,40 @@
         "cables": 3,
         "floors": 6
       }
-    }
+    },
+	{
+  "id": "pickleball-10c-001",
+  "slug": "16-pickleball-10courts",
+  "name": "Khu Sân Pickleball 10 Sân (Camera + Phòng Điều Khiển + Cáp Treo)",
+  "category": "CCTV & Mạng",
+  "mode": "topology",
+  "badge": "Sample Project",
+  "version": "1.0.0",
+  "updatedAt": "2026-11-19",
+  "author": "HACHIHI",
+  "description": "Hạ tầng camera và mạng cho cụm 10 sân Pickleball (2 dãy x 5 sân, 6,10m x 13,41m/sân), 2 cam/sân, 2 cam cổng/bãi xe, phòng điều khiển (PC, NVR, Switch, cam trong/ngoài, màn hình nhỏ/lớn) và cáp treo trên cao.",
+  "highlights": [
+    "10 sân (2 dãy x 5 sân)",
+    "24+ camera IP & an ninh",
+    "Phòng điều khiển + cáp treo"
+  ],
+  "tags": [
+    "Pickleball",
+    "CCTV",
+    "Camera",
+    "NVR",
+    "Outdoor"
+  ],
+  "projectUrl": "/templates/16-pickleball-10courts/project.json",
+  "previewUrl": "/templates/16-pickleball-10courts/preview.svg",
+  "hasProjectData": true,
+  "stats": {
+    "nodes": 30,
+    "assets": 30,
+    "racks": 0,
+    "cables": 24,
+    "floors": 1
+  }
+}
   ]
 }
