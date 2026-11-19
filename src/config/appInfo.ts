@@ -9,7 +9,7 @@ export const APP_SHORT_NAME = 'HACHIHI';
 export const QUICK_TOUR_STORAGE_KEY = 'hachihi_quick_tour_done_v1';
 
 export const APP_VERSION: string =
-  typeof __APP_VERSION__ !== 'undefined' && __APP_VERSION__ ? __APP_VERSION__ : '3.1.1';
+  typeof __APP_VERSION__ !== 'undefined' && __APP_VERSION__ ? __APP_VERSION__ : '26111917';
 
 export const APP_BUILD_HASH: string =
   typeof __BUILD_HASH__ !== 'undefined' && __BUILD_HASH__ ? __BUILD_HASH__ : 'local';
