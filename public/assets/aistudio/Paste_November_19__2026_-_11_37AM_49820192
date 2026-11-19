@@ -1,0 +1,159 @@
+Dưới đây là báo cáo Sprint 0 – Audit & Kiến trúc HACHIHI V4 trên codebase hiện tại. Toàn bộ kết luận được đối chiếu trực tiếp từ mã nguồn và kết quả chạy kiểm tra thực tế (npm run lint, npm test, npm run build, đo kích thước public/ và dist/). Chưa có bất kỳ sửa đổi code nào được thực hiện ở bước này.
+I. Hiện trạng Build, Test & Release Hygiene (Đo thực tế)
+npm run lint (tsc --noEmit): Đạt (0 lỗi TypeScript).
+npm test (src/utils/__tests__/runTests.ts): Đạt 103/103 test suites.
+npm run build (vite build + VitePWA): Đạt về mặt biên dịch, tạo dist/ ~15 MB, nhưng phát sinh các cảnh báo sau:
+Chunk dist/index-*.js đạt 933.17 kB (vượt chunkSizeWarningLimit: 900 trong vite.config.ts). Các vendor lớn gồm exceljs-vendor (929 kB), pdf-vendor (785 kB), three-vendor (602 kB), recharts-vendor (403 kB).
+CI Guard (/.github/workflows/ci.yml dòng 35–55) đang ở trạng thái SẼ FAIL vì:
+Thư mục public/assets/aistudio/ vẫn tồn tại (image_e921af2e.png 248 KB + Paste_November_18__2026_-_7_21PM_1753feb0 43 KB) và đã bị đưa vào dist/sw.js (dòng 287).
+Tổng dung lượng public/ đo được 8,989,974 bytes (~8.57 MB), vượt xa ngưỡng 1,048,576 bytes (1 MB) do chứa public/wasm/libredwg-web.wasm (7.5 MB).
+II. Trả lời 10 câu hỏi Audit của Sprint 0
+1. Kiến trúc hiện tại đang tổ chức như thế nào?
+Codebase là một React 19 + TypeScript + Vite 8 + Tailwind CSS v4 SPA, kèm tùy chọn Express server (server.ts) cho dev/full-stack và Vercel Serverless Functions (/api/gemini/chat.ts, /api/health.ts, /api/track.ts) dùng chung nghiệp vụ từ src/server/:
+Presentation Layer: src/App.tsx (3.327 dòng), src/components/canvas/DesignCanvas.tsx (3.301 dòng), Network3DScene.tsx (2.973 dòng), src/cad/components/*, src/components/properties/*, src/components/modals/*.
+State / Application Layer: Custom hook store src/store/useProjectStore.ts (1.620 dòng) ghép 4 slice (useUIStateSlice, useNodesSlice, useCablesSlice, useProjectSettingsSlice) + ViewportContext + useCADController. Không dùng Zustand/Redux.
+Engineering Core: Nằm rải trong src/utils/: engineeringValidator.ts (1.392 dòng), bomAggregator.ts (1.644 dòng), cableRouting.ts, poeCalculator.ts, portCompatibility.ts, ipAutoAssign.ts, rackGeometry.ts, rackAirflow.ts, tia606.ts.
+Off-thread Workers: src/workers/infrastructureCompute.worker.ts, cableRender.worker.ts, src/cad/workers/cadImport.worker.ts, src/utils/computeWorkerClient.ts.
+CAD Subsystem (src/cad/*): Tách khá sạch thành core/, geometry/, import/, dwg/, rendering/, commands/, storage/ (riêng CADDatabase IndexedDB).
+Data Layer: src/utils/projectStorage.ts (1.668 dòng) với IndexedDB (projects, revisions, snapshots, meta), SaveCoordinator, localStorage ring-buffer 3 snapshot kèm checksum FNV-1a, và projectPackage.ts (.hachihi.json có SHA-256).
+2. Những module nào đã có và thực sự hoạt động tốt?
+Lưu trữ & chống mất dữ liệu (saveCoordinator.ts, projectStorage.ts, projectPackage.ts): Có debounce coalescing, re-drain khi edit xảy ra lúc đang lưu (dirtyVersion > committedVersion), ring-buffer 3 recovery snapshot có FNV-1a checksum, auto-snapshot 10 phút, schema migration + validation, package export/import có kiểm tra SHA-256 và chống XSS/SVG injection (security.ts).
+CAD 2D DXF Studio (src/cad/*): Streaming DXF 2-pass trong Web Worker với backpressure & V8 heap guard, Binary DXF decoder, transform Block/OCS→WCS, OSNAP/Trim/Extend/Offset, bitmap pan cache, lưu chunked IndexedDB (2.000 entity/chunk), xuất DXF/SVG/PDF/HTML.
+BOM Engine (bomAggregator.ts, bomPricingCatalog.json): Tính dự phòng copper/fiber, thông tầng riser, tối ưu cắt cuộn FFD (optimizeCableSpools 305m/1000m), suy ra vật tư phụ (tủ/thanh quản lý/M6 cage nut/nhãn TIA-606/bù PoE injector), so sánh 2 phiên bản BOM (compareProjectBoms), xuất Excel 6 sheet (excelService.ts) và CSV BOM.
+Export & Handover (services/export/*, svgExport.ts, pdfExporter.ts, dxfExporter.ts, htmlViewerExporter.ts, handoverBundle.ts): Xuất SVG thuần (không foreignObject), PDF A4–A1 (2D/3D/Both), DXF R12, HTML Viewer standalone offline nhúng Three.js, và ZIP bàn giao Handover_Bundle.zip.
+Network Scanner & Excel Tree Import (scannerImport.ts, excelTreeImporter.ts): Parse CSV/JSON, diff-merge theo MAC/IP, import cây thiết bị 2-sheet Excel.
+Rack Geometry & Thermal (rackGeometry.ts, rackAirflow.ts): Kiểm tra xung đột U mặt trước/sau, tải trọng, thống kê front/rear, ước tính airflow/BTU.
+Backend Security (src/server/chatService.ts, chatSecurity.ts, trackService.ts): Chống IP spoofing, kiểm tra Origin, secret timing-safe, sanitize công thức Google Sheets (= + - @), fallback offline diagnostics (buildLocalDiagnosticsReply).
+3. Những module nào mới chỉ có giao diện, nửa vời, bị ngắt kết nối hoặc trùng lặp logic?
+libredwg-web.wasm + DwgDatabaseMapper.ts bị ngắt kết nối (Dead Integration): public/wasm/libredwg-web.wasm (7.5 MB) và src/cad/import/DwgDatabaseMapper.ts (997 dòng) đã viết xong nhưng DWGImporter.ts và DWGConversionService.ts không gọi mapDwgDatabaseToCadDocument — hiện chỉ đọc 64 byte header rồi báo cần đổi sang DXF hoặc gọi http-converter ngoài.
+Máng cáp (CableTray) mới có hiển thị & BOM, thiếu UI vẽ/chỉnh sửa: DesignCanvas.tsx, proceduralDevices.ts, cableRouting.ts và bomAggregator.ts đều xử lý cableTrays, nhưng không có tool/action nào trong useProjectStore (addCableTray, updateCableTray, deleteCableTray) cho phép kỹ sư vẽ/sửa máng cáp trên canvas (chỉ xuất hiện từ template).
+Fiber Core / ODF / Splice chưa có mô hình chi tiết: CableInspector.tsx (dòng 75–76) chỉ giữ fiberConnectors và fiberSplices trong useState cục bộ, không lưu vào CableEdge trong ProjectState (đổi cáp hoặc đóng panel là mất). Chưa có sơ đồ lõi sợi (1FO/2FO/4FO/8FO/12FO/24FO), trạng thái từng port ODF, suy hao bước sóng 1310/1550/850nm lưu bền vững.
+portCompatibility.ts và computeOpticalLinkBudget chưa đi vào addCable và runEngineeringAudit:
+CanvasSelectionOverlays.tsx có kiểm tra tương thích cổng khi người dùng mở popover nối dây, nhưng useCablesSlice.ts (addCable) và CableInspector.tsx (tab Kết nối đổi sourcePortId/targetPortId) không gọi evaluatePortPairCompatibility.
+runEngineeringAudit trong engineeringValidator.ts không kiểm tra sai tương thích media cổng-cáp (VD: cắm SFP+ quang vào port RJ45 đồng hay cáp CAT6_UTP chạy 10G/100G), không kiểm tra computeOpticalLinkBudget cho toàn bộ tuyến quang, và chỉ kiểm tra PoE tổng dự án chứ không gọi computeSwitchPoeBreakdown để bắt lỗi từng switch quá tải PoE!
+Trùng lặp logic tính BOM & báo giá: Tồn tại song song bomAggregator.ts (computeProjectBomStats), tia606.ts (estimateBomWithLabor — hiện không có caller nào ngoài file), và cableRouting.ts (computeProjectCableSummary — dùng dự phòng cố định 10%, không tính riser/spool như bomAggregator), đồng thời CableMaterialSummaryPanel.tsx dùng computeProjectCableSummary nên số liệu trong Inspector có thể lệch với BomStatisticsModal.
+AI Chat (NetworkAssistantChat.tsx): An toàn (chỉ đọc, không sửa dữ liệu dự án), nhưng mới dừng ở hỏi đáp văn bản thuần với 12 sampleDevices và 6 racksSummary; chưa có khả năng đề xuất thiết kế/sửa lỗi có cấu trúc kèm bước xác nhận người dùng.
+4. Có vấn đề gì trong Project Data Model và cơ chế lưu trữ?
+Phát hiện bug nghiêm trọng trong useProjectStore.ts (areStatesStructurallyEqual, dòng 73–95): Hàm so sánh tham chiếu bỏ sót cableTrays, customDevices, và description. Khi gọi updateProject chỉ để cập nhật một trong các trường này, mọi trường khác giữ nguyên tham chiếu (===), dẫn đến hàm trả về true và bỏ qua hoàn toàn cập nhật + không đánh dấu dirty/save.
+Orphan DeviceAsset khi xóa Node (useNodesSlice.ts, dòng 897–916): deleteNodes xóa DiagramNode và CableEdge liên quan, nhưng không dọn prev.assets[assetId] khi asset đó không còn node hay rack nào tham chiếu.
+Lệch chuẩn Asset giữa các engine:
+bomAggregator.ts (dòng 571) và engineeringValidator.ts (dòng 418) duyệt Object.values(project.assets) (tính cả orphan asset!).
+Ngược lại, poeCalculator.ts (getActiveProjectAssets, dòng 257) chỉ lấy asset đang gắn trên node hoặc rack. Hệ quả: sau khi xóa thiết bị trên bản vẽ, BOM và Audit vẫn đếm thiết bị ma đó, trong khi PoE lại không đếm.
+Dữ liệu CAD và Project chính tách đôi IndexedDB: CADDatabase (hachihi-cad-db) và projectStorage (hachihi-projects-db) độc lập; khi xóa vĩnh viễn/nhân bản/export .hachihi.json trong projectPackage.ts, dữ liệu CADDocument gắn projectId không đi cùng gói dự án hoặc không bị dọn theo khi xóa project.
+Recovery localStorage giới hạn ~3 MB UTF-16 (MAX_LOCALSTORAGE_RECOVERY_CHARS): Với dự án lớn có ảnh nhúng/custom icon, commitPreparedRecoveryEnvelope bỏ qua localStorage, chỉ còn IndexedDB.
+5. Những điểm nào có nguy cơ mất dữ liệu hoặc sai lệch dữ liệu giữa các workspace?
+Lỗi logic đảo dấu PoE (src/utils/poeCalculator.ts, dòng 114 vs DeviceNodeInspector.tsx, dòng 1015 & 1054):
+isPseDevice(asset) có dòng: if (asset.poeEnabled === true) return false;
+Trong DeviceNodeInspector.tsx, thuộc tính poeEnabled lại là checkbox "Dùng nguồn PoE" cho Powered Device (PD), còn PSE (Switch/NVR) chỉ hiển thị ô "Ngân sách cấp PoE" khi poeEnabled !== true. Tuy nhiên, nếu một Switch từng bị bật poeEnabled = true (hoặc import từ ngoài), isPseDevice trả về false và isPoeConsumerDevice trả về true — biến Switch cấp nguồn thành thiết bị tiêu thụ PoE! Ngược lại, template hiện đặt ap.poeEnabled = true, cam.poeEnabled = true, còn Switch để undefined hoặc false. Tên trường poeEnabled gây hiểu nhầm nghiêm trọng về mặt domain (nên tách rõ poeRole: 'none' | 'pse' | 'pd' hoặc chuẩn hóa semantic).
+undo() và redo() không cập nhật projectRef.current (useProjectStore.ts, dòng 508–532): Sau undo/redo, projectRef.current vẫn trỏ tới state cũ cho tới khi effect commit; nếu người dùng bấm Save/Switch ngay hoặc shortcut kích hoạt flushPendingSave() / saveRecoverySnapshot(projectRef.current), dữ liệu lưu xuống có thể là state trước khi Undo.
+Chồng chéo hiển thị giữa topology và floorplan (DesignCanvas.tsx, dòng 535–550 vs App.tsx, dòng 550):
+Ở mode floorplan/cctv/wifi/fiber, DesignCanvas lọc theo floorId nhưng không lọc diagramMode, chỉ ẩn node topology nếu đã gá vào rack (isRackMountedTopologyShadowNode). Ở mode topology, canvas trả về tất cả node mọi mode mọi tầng, trong khi App.tsx dòng 550 lại lọc cables theo c.diagramMode === activeMode. Điều này tạo nguy cơ trùng node, lạc cáp hoặc sửa vị trí ở mode này làm lệch/vướng mode khác nếu template tạo 2 node cho cùng 1 assetId.
+Thông số phụ của cáp quang và UPS simulator không persist:
+CableInspector.tsx (fiberConnectors, fiberSplices, cableSlackFactor) và PowerEnergyTabPanel.tsx (upsBatteryAh/Voltage/Count) dùng state React tạm thời; đổi đối tượng hoặc reload là mất các giả định tính toán vừa chỉnh.
+6. Những phép tính kỹ thuật nào chưa chính xác hoặc chưa có test?
+Đã có test tốt (103 suites): PoE budget cơ bản, Peukert/C-rate UPS runtime, L2 switching loop, CIDR overlap/longest-prefix, FFD cable spool optimization, saveCoordinator race-condition, recovery checksum, CAD streaming/render, port compatibility unit test.
+Chưa chính xác hoặc thiếu test tích hợp:
+PoE per-switch vs Audit: computeSwitchPoeBreakdown BFS tối đa depth = 4 qua passthrough (patch panel/ODF/riser), chưa có test trường hợp 2 switch nối nhau hoặc nhiều tầng passthrough > 4 hop; kết quả của nó chưa được nối vào runEngineeringAudit.
+Quỹ suy hao quang (Optical Link Budget): computeOpticalLinkBudget mới chỉ check 2 hệ số cố định FIBER_SM_OS2 / FIBER_MM_OM4, chưa tính theo bước sóng (850/1300/1310/1550nm), loại đầu nối (LC/SC/MPO), loại SFP transceiver budget, và chưa kiểm thử trong runEngineeringAudit.
+Suy hao & ngưỡng băng thông cáp đồng (CAT6_UTP vs 10G > 55m, CAT6A > 100m, DAC_10G > 7–10m): Hiện bomAggregator mới cảnh báo chung copperCables > 100m, chưa kiểm ngưỡng 55m của Cat6 @ 10Gbps hay chiều dài tối đa DAC 10G.
+Tổng tải điện & Power Factor: engineeringValidator kiểm VA * PF cho UPS domain khá ổn, nhưng totalWatts khi có PoE switch dễ tính trùng công suất nếu người dùng nhập powerWatts của Switch đã bao gồm ngân sách PoE + lại cộng thêm powerWatts của Camera/AP PoE (không tách systemPowerWatts vs poeDeliveredWatts).
+Độ dài cáp trong CableMaterialSummaryPanel vs BomStatisticsModal: Dùng 2 hàm khác nhau nên ra 2 con số khác nhau khi có thông tầng hoặc tuyến CAD.
+Chưa có test cho: deleteNodes orphan asset cleanup, areStatesStructurallyEqual khi sửa cableTrays/customDevices, undo() + flushPendingSave() ngay lập tức, và DWG WASM import.
+7. Những chức năng nào cần viết mới?
+Vẽ & chỉnh sửa Máng cáp / Ống gen (CableTray editor) trên canvas 2D + lưu vào useProjectStore (đồng bộ sẵn với router & BOM).
+Fiber Design Engine thực thụ: Quản lý số sợi/lõi quang (fiberCores), ODF port mapping, splicing/connector metadata lưu bền vững trong CableEdge / DeviceAsset, kiểm tra Optical Link Budget toàn dự án trong Engineering Audit.
+Kích hoạt Client-side DWG Import qua WASM (hoặc tách lazy/CDN có kiểm soát): Nối libredwg-web + DwgDatabaseMapper.ts vào DWGImporter.ts để đọc .dwg trực tiếp offline, hoặc loại bỏ 7.5 MB WASM khỏi public/ nếu không dùng bản local.
+Enforce Port Compatibility & Media Mismatch trong Store + Audit: Cảnh báo/chặn hoặc báo lỗi Audit khi cắm sai chuẩn cổng/cáp, sai tốc độ (100G trên CAT6_UTP), hoặc dùng port đang bận.
+Single-Device Cross-View Linking rõ ràng: Cơ chế đồng bộ/gắn 1 DeviceAsset giữa Topology ↔ Floorplan ↔ Rack ↔ BOM không tạo orphan asset, không đếm trùng.
+AI Engineering Proposals (tùy chọn có xác nhận): Cho phép AI xuất JSON diff có kiểm định (ví dụ gợi ý tách VLAN, gán IP, sửa cảnh báo Audit) và bắt buộc hiển thị Preview + nút Áp dụng trước khi sửa store.
+8. Những module nào nên refactor?
+Tách các file "khổng lồ":
+DesignCanvas.tsx (3.301 dòng) → tách hooks/handlers cho pointer interactions, cable routing preview, rack drag-drop, snapping/alignment guides.
+Network3DScene.tsx (2.973 dòng) → tách scene builder, camera controls, interaction raycaster, cutaway floor builder.
+App.tsx (3.327 dòng) → tách command/action registry, modal orchestrator, file import/drop handlers.
+useProjectStore.ts (1.620 dòng) + projectStorage.ts (1.668 dòng) + BomStatisticsModal.tsx (1.998 dòng).
+Hợp nhất BOM & Cable Summary: Loại bỏ estimateBomWithLabor dư thừa trong tia606.ts (hoặc gộp công thức định mức vào bomAggregator.ts), cập nhật CableMaterialSummaryPanel.tsx dùng chung nguồn tính từ bomAggregator / một helper thống nhất.
+Chuẩn hóa PoE domain semantics: Tách bạch poeRole (PSE vs PD vs None) thay cho cờ poeEnabled nhập nhằng hiện tại (vẫn giữ backward-compatible khi migrate JSON V3/V4).
+9. Có những rủi ro gì khi triển khai trên Vercel Hobby?
+Lỗi routing & CSP cho WebAssembly (vercel.json):
+vercel.json dòng 5 regex loại trừ rewrite SPA chỉ liệt kê: api/|assets/|icon\.svg|... — KHÔNG loại trừ /wasm/! Khi app fetch /wasm/libredwg-web.wasm, Vercel Rewrite sẽ trả về /index.html (200 text/html), gây lỗi CompileError: magic word khi nạp WASM!
+Header Content-Security-Policy trong vercel.json (dòng 27) đang đặt script-src 'self' — thiếu 'wasm-unsafe-eval' nên trình duyệt sẽ chặn khởi tạo WebAssembly của libredwg-web trên production!
+CI/CD & dung lượng public/ + Precaching PWA:
+public/ hiện 8.57 MB (fail ci.yml limit 1 MB) và chứa public/assets/aistudio/ (fail ci.yml guard + lọt vào dist/sw.js).
+dist/index-*.js 933 kB hơi nặng cho lần tải đầu; nên split thêm vendor/templates hoặc lazy load hợp lý.
+Serverless Cold Start & Rate Limit (src/server/chatRateLimit.ts, trackService.ts):
+Trên Vercel Hobby, serverless functions là stateless & ephemeral: ipRateWindows trong trackService.ts và fallback in-memory rate limit trong chatRateLimit.ts bị reset mỗi cold start hoặc không chia sẻ giữa các lambda instance.
+Đáng chú ý trong chatTypes.ts (dòng 98–103): ở NODE_ENV === 'production', failClosedOnRedisError mặc định là true. Nếu chưa cấu hình UPSTASH_REDIS_REST_URL & UPSTASH_REDIS_REST_TOKEN trên Vercel, cần kiểm tra kỹ hành vi của chatRateLimit.ts xem có fallback sang in-memory hay chặn luôn (nếu fail-closed mà thiếu Redis, API chat sẽ báo lỗi).
+Timeout Vercel Hobby (10s cho Hobby plan ở cấu hình mặc định):
+GEMINI_TIMEOUT_MS đang đặt 45_000 ms (chatTypes.ts:59), trong khi giới hạn thực thi Serverless Function trên gói Vercel Hobby mặc định là 10 giây (tối đa cấu hình maxDuration tới 60s nếu hỗ trợ Fluid Compute, nhưng vercel.json hiện chưa khai báo functions.*.maxDuration). Các prompt Gemini Deep mode (gemini-4-hydrogen) kéo dài >10s có nguy cơ bị Vercel cắt kết nối 504 trước khi kịp fallback.
+Thiếu persistence server-side là bình thường (Local-first): Vì dự án lưu IndexedDB tại máy người dùng, đây là ưu điểm trên Vercel Hobby (không tốn DB server), nhưng cần đảm bảo .hachihi.json + CAD document đi cùng nhau để không mất bản vẽ nền khi đổi máy.
+10. Đề xuất thứ tự phát triển tối ưu và tiêu chí nghiệm thu từng sprint
+III. Ý kiến Chuyên gia & Lộ trình Sprints 1–8 Đề xuất
+Đánh giá chuyên gia: "Cái nào hợp lý thì làm"
+Bản đặc tả V4 rất bài bản, nhưng một số phần codebase hiện tại đã làm vượt mức hoặc ổn định rồi — không nên viết lại từ đầu mà chỉ sửa bug lõi, nối mạch các module đã có, và lấp đúng các khoảng trống kỹ thuật thực sự:
+Giữ nguyên & chỉ gia cố Data/Storage Core: SaveCoordinator, Ring-buffer checksum, ProjectPackage SHA-256 đã rất chặt chẽ. Chỉ cần vá 3 lỗ hổng: (a) sửa areStatesStructurallyEqual (so sánh đủ trường hoặc dùng reference/version counter), (b) sửa undo/redo đồng bộ projectRef, (c) dọn orphan asset & đồng bộ CADDatabase theo ProjectState khi xóa/nhân bản/đóng gói.
+Quyết định thực tế về libredwg-web.wasm (7.5 MB):
+Khuyến nghị: Giữ DWG import client-side bằng cách nối DwgDatabaseMapper.ts với @mlightcad/libredwg-web, nhưng phục vụ file .wasm có kiểm soát (ví dụ dời khỏi public/ sang lazy dynamic asset hoặc nới/cập nhật rule CI riêng cho /wasm/, đồng thời cập nhật vercel.json rewrite + CSP 'wasm-unsafe-eval'). Việc xóa ngay public/assets/aistudio/ là bắt buộc để hết rác trong dist/sw.js.
+Không dùng AI làm công cụ vẽ mặc định: Giữ nguyên nguyên tắc offline-first trong đặc tả; chỉ nâng cấp nhẹ AI sau cùng (Sprint 8) theo hướng Preview Diff → User Confirm.
+Ưu tiên sửa các lỗi kỹ thuật tính toán trước khi chia nhỏ UI: Bug PoE poeEnabled, orphan asset làm sai BOM, và lỗ hổng trong runEngineeringAudit ảnh hưởng trực tiếp đến độ tin cậy kỹ thuật — phải làm ở Sprint 1 & 2.
+Lộ trình Sprint chi tiết & Tiêu chí Nghiệm thu (Acceptance Criteria)
+Sprint 1: Data Integrity, Undo/Redo & Release Hygiene (Nền tảng an toàn dữ liệu)
+Phạm vi:
+Sửa areStatesStructurallyEqual trong useProjectStore.ts (bổ sung cableTrays, customDevices, description, hoặc dùng immutable update chuẩn) + đồng bộ projectRef.current trong undo()/redo().
+Xử lý orphan DeviceAsset khi deleteNodes / deleteRack, hoặc chuẩn hóa helper getActiveProjectAssets dùng thống nhất ở mọi nơi (bomAggregator, engineeringValidator, poeCalculator).
+Liên kết vòng đời CADDatabase với Project (xóa project xóa luôn CAD doc gắn projectId; nhân bản project nhân bản CAD doc; tùy chọn nhúng CAD metadata/doc gọn vào .hachihi.json).
+Dọn public/assets/aistudio/ khỏi repo và sw.js, cấu hình vercel.json (loại trừ /wasm/, thêm 'wasm-unsafe-eval', cấu hình maxDuration phù hợp cho /api/gemini/chat), giải quyết xung đột ci.yml 1 MB guard với libredwg-web.wasm.
+Tiêu chí nghiệm thu:
+Test chứng minh sửa cableTrays/description kích hoạt history + dirty + autosave; undo() + flushPendingSave() ngay lập tức lưu đúng state sau undo; xóa node không để lại asset ma làm sai BOM/Audit.
+npm run lint, npm test, npm run build và toàn bộ bước Release Hygiene Guard trong ci.yml đạt 100%.
+Sprint 2: Engineering Core Accuracy (PoE, Port, Power, Optical Budget)
+Phạm vi:
+Vá triệt để bug isPseDevice / poeEnabled trong poeCalculator.ts + DeviceNodeInspector.tsx (tách rõ vai trò PSE vs PD, migrate an toàn dữ liệu cũ).
+Nối evaluatePortPairCompatibility vào useCablesSlice.ts (addCable, reconnectCableEndpoint) và CableInspector.tsx (hiển thị cảnh báo rõ ràng, chặn nối port nguồn với port mạng/port đã up).
+Nâng cấp runEngineeringAudit: tích hợp computeSwitchPoeBreakdown (bắt quá tải từng switch PoE riêng lẻ), computeOpticalLinkBudget cho tất cả tuyến quang, kiểm tra tương thích media/tốc độ (Cat6 @ 10G > 55m, DAC > 7m, SFP+ vs RJ45), tránh tính trùng công suất PoE trên AC UPS load.
+Persist cấu hình fiberConnectors, fiberSplices, slackFactor (trên CableEdge) và UPS simulator specs thay vì giữ trong useState tạm.
+Tiêu chí nghiệm thu:
+Có unit test chứng minh: switch không bị biến thành PD khi gán/sửa PoE; runEngineeringAudit phát hiện switch PoE lẻ quá tải, suy hao quang vượt ngưỡng, sai media cổng-cáp, Cat6 10G > 55m.
+Reload trang vẫn giữ nguyên số đầu nối/mối hàn/slack đã cấu hình trên tuyến cáp.
+Sprint 3: Cross-Workspace Synchronization & Cable Tray Authoring
+Phạm vi:
+Thiết lập quy tắc đồng bộ rõ ràng cho 1 DeviceAsset xuất hiện ở nhiều chế độ (topology ↔ floorplan ↔ rack): liên kết nút song ánh (Jump/Locate giữa Topology & Floorplan, gắn Rack U tự cập nhật floor/room, filter node/cable nhất quán giữa DesignCanvas và App.tsx).
+Bổ sung công cụ vẽ, chỉnh điểm (vertex), chỉnh kích thước/loại (network_tray, power_tray, conduit) và xóa Máng cáp / Ống gen trực tiếp trên canvas 2D + useProjectStore.
+Hợp nhất logic CableMaterialSummaryPanel.tsx với bomAggregator.ts và xóa/hợp nhất estimateBomWithLabor trong tia606.ts để chỉ còn 1 nguồn sự thật (Single Source of Truth) cho chiều dài cáp & BOM.
+Tiêu chí nghiệm thu:
+Vẽ được máng cáp mới trên mặt bằng → Auto-Route cáp đi qua máng → chiều dài trong CableInspector, CableMaterialSummaryPanel, BomStatisticsModal và Excel khớp nhau 100%.
+Chỉnh sửa IP/tên/U của thiết bị ở bất kỳ mode nào đều phản ánh tức thời ở mode còn lại và trong Rack/BOM.
+Sprint 4: Fiber Design Engine (Sơ đồ quang, Lõi sợi & ODF chuyên sâu)
+Phạm vi:
+Mở rộng data model cho cáp quang & ODF: số lõi (coreCount: 2/4/8/12/24/48 FO), bảng ánh xạ lõi sợi / mối hàn / port ODF (FiberSpliceMap hoặc odfPorts), bước sóng (850nm/1300nm/1310nm/1550nm) và loại chuẩn đầu nối (LC/SC/FC).
+UI quản lý đấu nối ODF & phân bổ sợi quang (trong DeepInspectModal hoặc chế độ fiber chuyên biệt) + kiểm tra đứt gãy / trùng lõi sợi trong runEngineeringAudit.
+Xuất Fiber Core & ODF Schedule vào CSV/Excel trong gói bàn giao.
+Tiêu chí nghiệm thu:
+Tạo được tuyến quang 8FO từ ODF Tủ chính → ODF Tầng 2, gán từng cặp sợi (FO1-2, FO3-4...) và tính đúng quỹ suy hao theo bước sóng thực tế; xuất được bảng lịch đấu nối ODF ra Excel/CSV.
+Sprint 5: AutoCAD Studio & DWG Client-side Integration
+Phạm vi:
+Kết nối @mlightcad/libredwg-web (WASM) + DwgDatabaseMapper.ts vào DWGImporter.ts để mở .dwg trực tiếp hoàn toàn offline trên trình duyệt (với http-converter làm phương án dự phòng cho file phức tạp/chữ ký lạ).
+Kiểm tra tải WASM thực tế trên cả Vite dev (server.ts) và production build (đảm bảo vercel.json + CSP cho phép WASM chạy sạch).
+Bổ sung test cho đường dẫn import DWG → CADDocument → underlay lên mặt bằng mạng & trích xuất BOM từ nét CAD.
+Tiêu chí nghiệm thu:
+Mở file .dwg mẫu offline không lỗi CSP/MIME, hiển thị đúng layer/block, lồng làm nền cho Floorplan và đo/trích xuất được chiều dài tuyến cáp.
+Sprint 6: Modular Refactoring & Bundle/Performance Optimization
+Phạm vi:
+Tách nhỏ có kiểm soát các file monolith (DesignCanvas.tsx, Network3DScene.tsx, App.tsx, BomStatisticsModal.tsx, projectStorage.ts) thành hooks và sub-modules rõ trách nhiệm, không thay đổi hành vi UI đang chạy tốt.
+Tối ưu code-splitting để kéo dist/index-*.js xuống dưới ngưỡng cảnh báo (dưới 500–600 kB gzipped hợp lý) và giảm re-render canvas khi kéo thả dự án lớn (>200 thiết bị).
+Tiêu chí nghiệm thu:
+Không còn cảnh báo chunk > 900 kB khi npm run build; 100% unit tests + E2E Playwright (npm run test:e2e) pass.
+Sprint 7: Verification Hardening & E2E Coverage
+Phạm vi:
+Bổ sung bộ test tích hợp chuyên sâu cho mọi nhánh vừa hoàn thiện (PoE per-switch audit, Fiber ODF/link budget, CableTray routing, Orphan asset cleanup, Undo/Save race, Export reconciliation SVG/DXF/PDF/Excel/ZIP).
+Mở rộng e2e/smoke.spec.ts kiểm tra luồng end-to-end thật trên Chromium (tạo dự án → vẽ phòng/máng → đặt rack & switch → nối cáp kiểm port → chạy audit → xuất BOM/package → reload từ IndexedDB).
+Tiêu chí nghiệm thu:
+npm run lint, npm test và npm run test:e2e pass hoàn toàn trên CI.
+Sprint 8: Optional AI Assistant Enhancement & Production Readiness
+Phạm vi:
+Nâng cấp NetworkAssistantChat (tùy chọn): truyền ngữ cảnh kỹ thuật đầy đủ hơn (tóm tắt PoE switch, danh sách subnet/VLAN, top lỗi Audit) và hỗ trợ AI Design Suggestions ở chế độ đề xuất (Read-only Proposal + Diff Preview + Nút xác nhận của kỹ sư) — AI tuyệt đối không tự ý ghi đè store.
+Kiểm tra fallback server chat khi thiếu Redis (UPSTASH_REDIS_REST_URL) trên Vercel Hobby để tránh chết 500/503 ngoài ý muốn khi NODE_ENV === 'production', hoàn thiện tài liệu cấu hình .env.example & README.md.
+Tiêu chí nghiệm thu:
+Ứng dụng vận hành 100% tính năng cốt lõi khi offline/không có GEMINI_API_KEY; khi có AI, mọi thay đổi đề xuất đều qua bước xem trước & xác nhận tường minh.
+Bạn hãy xem xét lộ trình và các phát hiện audit trên. Nếu đồng ý với phạm vi Sprint 1 (hoặc muốn điều chỉnh ưu tiên giữa các sprint), hãy xác nhận để tôi bắt đầu triển khai từng bước và kiểm thử đầy đủ.
+ok bắt đầu đi
