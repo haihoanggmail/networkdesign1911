@@ -5,7 +5,7 @@
   "category": "CCTV & Mạng",
   "mode": "topology",
   "badge": "Sample Project",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "updatedAt": "2026-11-20",
   "author": "HACHIHI",
   "description": "Sơ đồ hạ tầng hoàn chỉnh cho khu 10 sân Pickleball (2 dãy x 5 sân, 6,10m x 13,41m/sân), 20 camera sân, 2 camera cổng/bãi đỗ xe, phòng điều khiển (PC, NVR, Switch PoE, cam trong/ngoài phòng, màn hình nhỏ/lớn) và hệ thống cáp treo trên cao.",
