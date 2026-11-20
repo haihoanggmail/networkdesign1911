@@ -1,17 +1,17 @@
 {
   "id": "proj_pickleball_10courts",
-  "name": "Dự án mẫu: Khu Sân Pickleball 10 Sân",
+  "name": "Dự án mẫu: Khu Sân Pickleball 10 Sân (2 Dãy x 5 Sân)",
   "author": "HACHIHI Sample Architect",
   "version": "3.1.0",
-  "lastModified": "2026-11-19T09:40:00.000Z",
+  "lastModified": "2026-11-20T00:24:00.000Z",
   "buildings": [
     {
       "id": "bld_pb_complex",
-      "name": "Khu Sân Pickleball 10 Sân",
+      "name": "Khu Liên Hợp Sân Pickleball 10 Sân",
       "totalFloors": 1,
       "basementFloors": 0,
-      "widthMeters": 80,
-      "depthMeters": 50,
+      "widthMeters": 52,
+      "depthMeters": 44,
       "floorHeightMeters": 6.5,
       "wallThicknessMm": 200,
       "layoutStyle": "rectangle"
@@ -22,60 +22,156 @@
       "id": "flr_pb_main",
       "buildingId": "bld_pb_complex",
       "level": 1,
-      "name": "Mặt bằng Sân Thi Đấu & Phòng Điều Khiển",
-      "description": "2 dãy x 5 sân (6,10m x 13,41m), 1 phòng điều khiển, cổng vào & bãi đỗ xe",
-      "widthMeters": 80,
-      "depthMeters": 50
+      "name": "Mặt bằng 10 Sân Thi Đấu, Phòng Điều Khiển & Bãi Xe",
+      "description": "2 dãy x 5 sân (6,10m x 13,41m), 24 camera PoE, phòng điều khiển (PC, NVR, Switch, 2 màn hình) và cáp treo trên cao",
+      "widthMeters": 52,
+      "depthMeters": 44
     }
   ],
   "rooms": [
     {
+      "id": "rm_pb_court_01",
+      "floorId": "flr_pb_main",
+      "name": "Sân 01 (6,10m x 13,41m)",
+      "type": "sports_court",
+      "x": 60,
+      "y": 60,
+      "width": 122,
+      "height": 268,
+      "color": "#ecfdf5",
+      "wallThickness": 4
+    },
+    {
+      "id": "rm_pb_court_02",
+      "floorId": "flr_pb_main",
+      "name": "Sân 02 (6,10m x 13,41m)",
+      "type": "sports_court",
+      "x": 196,
+      "y": 60,
+      "width": 122,
+      "height": 268,
+      "color": "#ecfdf5",
+      "wallThickness": 4
+    },
+    {
+      "id": "rm_pb_court_03",
+      "floorId": "flr_pb_main",
+      "name": "Sân 03 (6,10m x 13,41m)",
+      "type": "sports_court",
+      "x": 332,
+      "y": 60,
+      "width": 122,
+      "height": 268,
+      "color": "#ecfdf5",
+      "wallThickness": 4
+    },
+    {
+      "id": "rm_pb_court_04",
+      "floorId": "flr_pb_main",
+      "name": "Sân 04 (6,10m x 13,41m)",
+      "type": "sports_court",
+      "x": 468,
+      "y": 60,
+      "width": 122,
+      "height": 268,
+      "color": "#ecfdf5",
+      "wallThickness": 4
+    },
+    {
+      "id": "rm_pb_court_05",
+      "floorId": "flr_pb_main",
+      "name": "Sân 05 (6,10m x 13,41m)",
+      "type": "sports_court",
+      "x": 604,
+      "y": 60,
+      "width": 122,
+      "height": 268,
+      "color": "#ecfdf5",
+      "wallThickness": 4
+    },
+    {
+      "id": "rm_pb_court_06",
+      "floorId": "flr_pb_main",
+      "name": "Sân 06 (6,10m x 13,41m)",
+      "type": "sports_court",
+      "x": 60,
+      "y": 392,
+      "width": 122,
+      "height": 268,
+      "color": "#ecfdf5",
+      "wallThickness": 4
+    },
+    {
+      "id": "rm_pb_court_07",
+      "floorId": "flr_pb_main",
+      "name": "Sân 07 (6,10m x 13,41m)",
+      "type": "sports_court",
+      "x": 196,
+      "y": 392,
+      "width": 122,
+      "height": 268,
+      "color": "#ecfdf5",
+      "wallThickness": 4
+    },
+    {
+      "id": "rm_pb_court_08",
+      "floorId": "flr_pb_main",
+      "name": "Sân 08 (6,10m x 13,41m)",
+      "type": "sports_court",
+      "x": 332,
+      "y": 392,
+      "width": 122,
+      "height": 268,
+      "color": "#ecfdf5",
+      "wallThickness": 4
+    },
+    {
+      "id": "rm_pb_court_09",
+      "floorId": "flr_pb_main",
+      "name": "Sân 09 (6,10m x 13,41m)",
+      "type": "sports_court",
+      "x": 468,
+      "y": 392,
+      "width": 122,
+      "height": 268,
+      "color": "#ecfdf5",
+      "wallThickness": 4
+    },
+    {
+      "id": "rm_pb_court_10",
+      "floorId": "flr_pb_main",
+      "name": "Sân 10 (6,10m x 13,41m)",
+      "type": "sports_court",
+      "x": 604,
+      "y": 392,
+      "width": 122,
+      "height": 268,
+      "color": "#ecfdf5",
+      "wallThickness": 4
+    },
+    {
       "id": "rm_pb_ctrl",
       "floorId": "flr_pb_main",
       "name": "Phòng Điều Khiển (6,10m x 13,41m)",
-      "type": "control_room",
-      "x": 920,
-      "y": 80,
-      "width": 160,
-      "height": 340,
+      "type": "server_room",
+      "x": 756,
+      "y": 60,
+      "width": 122,
+      "height": 268,
       "color": "#eff6ff",
       "wallThickness": 6
-    },
-    {
-      "id": "rm_pb_courts_top",
-      "floorId": "flr_pb_main",
-      "name": "Dãy Sân 01 - 05",
-      "type": "sports_court",
-      "x": 80,
-      "y": 80,
-      "width": 800,
-      "height": 220,
-      "color": "#f0fdf4",
-      "wallThickness": 4
-    },
-    {
-      "id": "rm_pb_courts_bot",
-      "floorId": "flr_pb_main",
-      "name": "Dãy Sân 06 - 10",
-      "type": "sports_court",
-      "x": 80,
-      "y": 320,
-      "width": 800,
-      "height": 220,
-      "color": "#f0fdf4",
-      "wallThickness": 4
     },
     {
       "id": "rm_pb_gate_park",
       "floorId": "flr_pb_main",
       "name": "Cổng Vào & Bãi Đỗ Xe",
-      "type": "parking",
-      "x": 80,
-      "y": 560,
-      "width": 800,
-      "height": 180,
+      "type": "reception",
+      "x": 60,
+      "y": 684,
+      "width": 666,
+      "height": 140,
       "color": "#f8fafc",
-      "wallThickness": 4
+      "wallThickness": 5
     }
   ],
   "racks": [],
@@ -85,24 +181,376 @@
       "name": "SW-POE-CTRL-01",
       "category": "switch",
       "vendor": "Hikvision",
-      "model": "DS-3E1526P-EI",
-      "assetTag": "PB-SW-01",
+      "model": "DS-3E1526P-EI (24-Port PoE+)",
+      "assetTag": "PB-AST-001",
+      "serialNumber": "SNPB2026SW01",
       "ipAddress": "192.168.40.2",
       "subnetMask": "255.255.255.0",
       "gateway": "192.168.40.1",
+      "macAddress": "00:1A:2B:40:00:01",
       "vlan": "40",
       "status": "online",
-      "powerWatts": 250,
-      "poeBudgetWatts": 230,
+      "powerWatts": 370,
+      "weightKg": 4.2,
+      "poeBudgetWatts": 370,
       "buildingId": "bld_pb_complex",
       "floorId": "flr_pb_main",
       "roomId": "rm_pb_ctrl",
       "ports": [
-        { "id": "port_1", "name": "PoE_1", "type": "RJ45_1G", "poe": true, "status": "up" },
-        { "id": "port_2", "name": "PoE_2", "type": "RJ45_1G", "poe": true, "status": "up" },
-        { "id": "port_3", "name": "PoE_3", "type": "RJ45_1G", "poe": true, "status": "up" },
-        { "id": "port_4", "name": "PoE_4", "type": "RJ45_1G", "poe": true, "status": "up" },
-        { "id": "port_5", "name": "Uplink_NVR", "type": "RJ45_1G", "status": "up" }
+        {
+          "id": "port_1",
+          "name": "Gi0/1",
+          "type": "RJ45_1G",
+          "poe": true,
+          "speed": "1 Gbps",
+          "status": "up",
+          "connectedCableId": "cab_pb_01",
+          "connectedTarget": {
+            "deviceId": "ast_pb_cam_s01_a",
+            "portId": "port_1"
+          }
+        },
+        {
+          "id": "port_2",
+          "name": "Gi0/2",
+          "type": "RJ45_1G",
+          "poe": true,
+          "speed": "1 Gbps",
+          "status": "up",
+          "connectedCableId": "cab_pb_02",
+          "connectedTarget": {
+            "deviceId": "ast_pb_cam_s01_b",
+            "portId": "port_1"
+          }
+        },
+        {
+          "id": "port_3",
+          "name": "Gi0/3",
+          "type": "RJ45_1G",
+          "poe": true,
+          "speed": "1 Gbps",
+          "status": "up",
+          "connectedCableId": "cab_pb_03",
+          "connectedTarget": {
+            "deviceId": "ast_pb_cam_s02_a",
+            "portId": "port_1"
+          }
+        },
+        {
+          "id": "port_4",
+          "name": "Gi0/4",
+          "type": "RJ45_1G",
+          "poe": true,
+          "speed": "1 Gbps",
+          "status": "up",
+          "connectedCableId": "cab_pb_04",
+          "connectedTarget": {
+            "deviceId": "ast_pb_cam_s02_b",
+            "portId": "port_1"
+          }
+        },
+        {
+          "id": "port_5",
+          "name": "Gi0/5",
+          "type": "RJ45_1G",
+          "poe": true,
+          "speed": "1 Gbps",
+          "status": "up",
+          "connectedCableId": "cab_pb_05",
+          "connectedTarget": {
+            "deviceId": "ast_pb_cam_s03_a",
+            "portId": "port_1"
+          }
+        },
+        {
+          "id": "port_6",
+          "name": "Gi0/6",
+          "type": "RJ45_1G",
+          "poe": true,
+          "speed": "1 Gbps",
+          "status": "up",
+          "connectedCableId": "cab_pb_06",
+          "connectedTarget": {
+            "deviceId": "ast_pb_cam_s03_b",
+            "portId": "port_1"
+          }
+        },
+        {
+          "id": "port_7",
+          "name": "Gi0/7",
+          "type": "RJ45_1G",
+          "poe": true,
+          "speed": "1 Gbps",
+          "status": "up",
+          "connectedCableId": "cab_pb_07",
+          "connectedTarget": {
+            "deviceId": "ast_pb_cam_s04_a",
+            "portId": "port_1"
+          }
+        },
+        {
+          "id": "port_8",
+          "name": "Gi0/8",
+          "type": "RJ45_1G",
+          "poe": true,
+          "speed": "1 Gbps",
+          "status": "up",
+          "connectedCableId": "cab_pb_08",
+          "connectedTarget": {
+            "deviceId": "ast_pb_cam_s04_b",
+            "portId": "port_1"
+          }
+        },
+        {
+          "id": "port_9",
+          "name": "Gi0/9",
+          "type": "RJ45_1G",
+          "poe": true,
+          "speed": "1 Gbps",
+          "status": "up",
+          "connectedCableId": "cab_pb_09",
+          "connectedTarget": {
+            "deviceId": "ast_pb_cam_s05_a",
+            "portId": "port_1"
+          }
+        },
+        {
+          "id": "port_10",
+          "name": "Gi0/10",
+          "type": "RJ45_1G",
+          "poe": true,
+          "speed": "1 Gbps",
+          "status": "up",
+          "connectedCableId": "cab_pb_10",
+          "connectedTarget": {
+            "deviceId": "ast_pb_cam_s05_b",
+            "portId": "port_1"
+          }
+        },
+        {
+          "id": "port_11",
+          "name": "Gi0/11",
+          "type": "RJ45_1G",
+          "poe": true,
+          "speed": "1 Gbps",
+          "status": "up",
+          "connectedCableId": "cab_pb_11",
+          "connectedTarget": {
+            "deviceId": "ast_pb_cam_s06_a",
+            "portId": "port_1"
+          }
+        },
+        {
+          "id": "port_12",
+          "name": "Gi0/12",
+          "type": "RJ45_1G",
+          "poe": true,
+          "speed": "1 Gbps",
+          "status": "up",
+          "connectedCableId": "cab_pb_12",
+          "connectedTarget": {
+            "deviceId": "ast_pb_cam_s06_b",
+            "portId": "port_1"
+          }
+        },
+        {
+          "id": "port_13",
+          "name": "Gi0/13",
+          "type": "RJ45_1G",
+          "poe": true,
+          "speed": "1 Gbps",
+          "status": "up",
+          "connectedCableId": "cab_pb_13",
+          "connectedTarget": {
+            "deviceId": "ast_pb_cam_s07_a",
+            "portId": "port_1"
+          }
+        },
+        {
+          "id": "port_14",
+          "name": "Gi0/14",
+          "type": "RJ45_1G",
+          "poe": true,
+          "speed": "1 Gbps",
+          "status": "up",
+          "connectedCableId": "cab_pb_14",
+          "connectedTarget": {
+            "deviceId": "ast_pb_cam_s07_b",
+            "portId": "port_1"
+          }
+        },
+        {
+          "id": "port_15",
+          "name": "Gi0/15",
+          "type": "RJ45_1G",
+          "poe": true,
+          "speed": "1 Gbps",
+          "status": "up",
+          "connectedCableId": "cab_pb_15",
+          "connectedTarget": {
+            "deviceId": "ast_pb_cam_s08_a",
+            "portId": "port_1"
+          }
+        },
+        {
+          "id": "port_16",
+          "name": "Gi0/16",
+          "type": "RJ45_1G",
+          "poe": true,
+          "speed": "1 Gbps",
+          "status": "up",
+          "connectedCableId": "cab_pb_16",
+          "connectedTarget": {
+            "deviceId": "ast_pb_cam_s08_b",
+            "portId": "port_1"
+          }
+        },
+        {
+          "id": "port_17",
+          "name": "Gi0/17",
+          "type": "RJ45_1G",
+          "poe": true,
+          "speed": "1 Gbps",
+          "status": "up",
+          "connectedCableId": "cab_pb_17",
+          "connectedTarget": {
+            "deviceId": "ast_pb_cam_s09_a",
+            "portId": "port_1"
+          }
+        },
+        {
+          "id": "port_18",
+          "name": "Gi0/18",
+          "type": "RJ45_1G",
+          "poe": true,
+          "speed": "1 Gbps",
+          "status": "up",
+          "connectedCableId": "cab_pb_18",
+          "connectedTarget": {
+            "deviceId": "ast_pb_cam_s09_b",
+            "portId": "port_1"
+          }
+        },
+        {
+          "id": "port_19",
+          "name": "Gi0/19",
+          "type": "RJ45_1G",
+          "poe": true,
+          "speed": "1 Gbps",
+          "status": "up",
+          "connectedCableId": "cab_pb_19",
+          "connectedTarget": {
+            "deviceId": "ast_pb_cam_s10_a",
+            "portId": "port_1"
+          }
+        },
+        {
+          "id": "port_20",
+          "name": "Gi0/20",
+          "type": "RJ45_1G",
+          "poe": true,
+          "speed": "1 Gbps",
+          "status": "up",
+          "connectedCableId": "cab_pb_20",
+          "connectedTarget": {
+            "deviceId": "ast_pb_cam_s10_b",
+            "portId": "port_1"
+          }
+        },
+        {
+          "id": "port_21",
+          "name": "Gi0/21",
+          "type": "RJ45_1G",
+          "poe": true,
+          "speed": "1 Gbps",
+          "status": "up",
+          "connectedCableId": "cab_pb_21",
+          "connectedTarget": {
+            "deviceId": "ast_pb_cam_gate",
+            "portId": "port_1"
+          }
+        },
+        {
+          "id": "port_22",
+          "name": "Gi0/22",
+          "type": "RJ45_1G",
+          "poe": true,
+          "speed": "1 Gbps",
+          "status": "up",
+          "connectedCableId": "cab_pb_22",
+          "connectedTarget": {
+            "deviceId": "ast_pb_cam_park",
+            "portId": "port_1"
+          }
+        },
+        {
+          "id": "port_23",
+          "name": "Gi0/23",
+          "type": "RJ45_1G",
+          "poe": true,
+          "speed": "1 Gbps",
+          "status": "up",
+          "connectedCableId": "cab_pb_23",
+          "connectedTarget": {
+            "deviceId": "ast_pb_cam_ctrl_in",
+            "portId": "port_1"
+          }
+        },
+        {
+          "id": "port_24",
+          "name": "Gi0/24",
+          "type": "RJ45_1G",
+          "poe": true,
+          "speed": "1 Gbps",
+          "status": "up",
+          "connectedCableId": "cab_pb_24",
+          "connectedTarget": {
+            "deviceId": "ast_pb_cam_ctrl_out",
+            "portId": "port_1"
+          }
+        },
+        {
+          "id": "port_25",
+          "name": "SFP_25",
+          "type": "SFP_PLUS_10G",
+          "poe": false,
+          "speed": "10 Gbps",
+          "status": "up",
+          "connectedCableId": "cab_pb_sw_nvr",
+          "connectedTarget": {
+            "deviceId": "ast_pb_nvr",
+            "portId": "port_1"
+          }
+        },
+        {
+          "id": "port_26",
+          "name": "SFP_26",
+          "type": "SFP_PLUS_10G",
+          "poe": false,
+          "speed": "10 Gbps",
+          "status": "up",
+          "connectedCableId": "cab_pb_sw_pc",
+          "connectedTarget": {
+            "deviceId": "ast_pb_pc",
+            "portId": "port_1"
+          }
+        },
+        {
+          "id": "port_27",
+          "name": "SFP_27",
+          "type": "SFP_PLUS_10G",
+          "poe": false,
+          "speed": "10 Gbps",
+          "status": "unlinked"
+        },
+        {
+          "id": "port_28",
+          "name": "SFP_28",
+          "type": "SFP_PLUS_10G",
+          "poe": false,
+          "speed": "10 Gbps",
+          "status": "unlinked"
+        }
       ]
     },
     "ast_pb_nvr": {
@@ -110,21 +558,52 @@
       "name": "NVR-PICKLEBALL-32CH",
       "category": "nvr",
       "vendor": "Hikvision",
-      "model": "DS-7732NXI-M4",
-      "assetTag": "PB-NVR-01",
+      "model": "DS-7732NXI-M4 (32 Kênh)",
+      "assetTag": "PB-AST-002",
+      "serialNumber": "SNPB2026NVR01",
       "ipAddress": "192.168.40.10",
       "subnetMask": "255.255.255.0",
       "gateway": "192.168.40.1",
+      "macAddress": "00:1A:2B:40:00:02",
       "vlan": "40",
       "status": "online",
       "powerWatts": 120,
+      "weightKg": 5.0,
       "buildingId": "bld_pb_complex",
       "floorId": "flr_pb_main",
       "roomId": "rm_pb_ctrl",
       "ports": [
-        { "id": "port_1", "name": "LAN_In", "type": "RJ45_1G", "status": "up" },
-        { "id": "port_2", "name": "HDMI_Main", "type": "HDMI", "status": "up" },
-        { "id": "port_3", "name": "VGA_Sub", "type": "VGA", "status": "up" }
+        {
+          "id": "port_1",
+          "name": "LAN1_Uplink",
+          "type": "RJ45_1G",
+          "speed": "1 Gbps",
+          "status": "up",
+          "connectedCableId": "cab_pb_sw_nvr",
+          "connectedTarget": {
+            "deviceId": "ast_pb_sw",
+            "portId": "port_25"
+          }
+        },
+        {
+          "id": "port_2",
+          "name": "HDMI_1",
+          "type": "RJ45_1G",
+          "speed": "HDMI",
+          "status": "up",
+          "connectedCableId": "cab_pb_nvr_mons",
+          "connectedTarget": {
+            "deviceId": "ast_pb_mon_small",
+            "portId": "port_1"
+          }
+        },
+        {
+          "id": "port_3",
+          "name": "HDMI_2",
+          "type": "RJ45_1G",
+          "speed": "HDMI",
+          "status": "unlinked"
+        }
       ]
     },
     "ast_pb_pc": {
@@ -133,191 +612,1885 @@
       "category": "workstation",
       "vendor": "Dell",
       "model": "OptiPlex 7010",
-      "assetTag": "PB-PC-01",
+      "assetTag": "PB-AST-003",
+      "serialNumber": "SNPB2026PC01",
       "ipAddress": "192.168.40.20",
       "subnetMask": "255.255.255.0",
       "gateway": "192.168.40.1",
+      "macAddress": "00:1A:2B:40:00:03",
       "vlan": "40",
       "status": "online",
       "powerWatts": 180,
+      "weightKg": 6.5,
       "buildingId": "bld_pb_complex",
       "floorId": "flr_pb_main",
       "roomId": "rm_pb_ctrl",
       "ports": [
-        { "id": "port_1", "name": "NIC_1G", "type": "RJ45_1G", "status": "up" },
-        { "id": "port_2", "name": "DP_Out", "type": "HDMI", "status": "up" }
+        {
+          "id": "port_1",
+          "name": "NIC_LAN",
+          "type": "RJ45_1G",
+          "speed": "1 Gbps",
+          "status": "up",
+          "connectedCableId": "cab_pb_sw_pc",
+          "connectedTarget": {
+            "deviceId": "ast_pb_sw",
+            "portId": "port_26"
+          }
+        },
+        {
+          "id": "port_2",
+          "name": "HDMI_Out_Main",
+          "type": "RJ45_1G",
+          "speed": "HDMI",
+          "status": "unlinked"
+        },
+        {
+          "id": "port_3",
+          "name": "DP_Out_LargeTV",
+          "type": "RJ45_1G",
+          "speed": "HDMI",
+          "status": "up",
+          "connectedCableId": "cab_pb_pc_monl",
+          "connectedTarget": {
+            "deviceId": "ast_pb_mon_large",
+            "portId": "port_1"
+          }
+        }
       ]
     },
     "ast_pb_mon_small": {
       "id": "ast_pb_mon_small",
-      "name": "MON-NHO-TRONG-PHONG",
-      "category": "monitor",
+      "name": "MON-GIAM-SAT-NHO",
+      "category": "workstation",
       "vendor": "LG",
-      "model": "27\" FHD Monitor",
-      "assetTag": "PB-MON-01",
+      "model": "27\" Monitor (Trong phòng)",
+      "assetTag": "PB-AST-004",
+      "serialNumber": "SNPB2026MON01",
+      "ipAddress": "",
+      "vlan": "",
       "status": "online",
       "powerWatts": 35,
+      "weightKg": 4.0,
       "buildingId": "bld_pb_complex",
       "floorId": "flr_pb_main",
       "roomId": "rm_pb_ctrl",
       "ports": [
-        { "id": "port_1", "name": "HDMI_In", "type": "HDMI", "status": "up" }
+        {
+          "id": "port_1",
+          "name": "HDMI_In",
+          "type": "RJ45_1G",
+          "speed": "HDMI",
+          "status": "up",
+          "connectedCableId": "cab_pb_nvr_mons",
+          "connectedTarget": {
+            "deviceId": "ast_pb_nvr",
+            "portId": "port_2"
+          }
+        }
       ]
     },
     "ast_pb_mon_large": {
       "id": "ast_pb_mon_large",
-      "name": "TV-LON-NGOAI-PHONG",
-      "category": "monitor",
+      "name": "MAN-HINH-HIEN-THI-LON",
+      "category": "workstation",
       "vendor": "Samsung",
-      "model": "65\" 4K Display",
-      "assetTag": "PB-MON-02",
+      "model": "65\" Outdoor/Wall Display (Ngoài phòng)",
+      "assetTag": "PB-AST-005",
+      "serialNumber": "SNPB2026TV01",
+      "ipAddress": "",
+      "vlan": "",
       "status": "online",
-      "powerWatts": 140,
+      "powerWatts": 150,
+      "weightKg": 22.0,
       "buildingId": "bld_pb_complex",
       "floorId": "flr_pb_main",
       "roomId": "rm_pb_ctrl",
       "ports": [
-        { "id": "port_1", "name": "HDMI_In", "type": "HDMI", "status": "up" }
+        {
+          "id": "port_1",
+          "name": "HDMI_In",
+          "type": "RJ45_1G",
+          "speed": "HDMI",
+          "status": "up",
+          "connectedCableId": "cab_pb_pc_monl",
+          "connectedTarget": {
+            "deviceId": "ast_pb_pc",
+            "portId": "port_3"
+          }
+        }
       ]
     },
-    "ast_pb_cam_in": {
-      "id": "ast_pb_cam_in",
-      "name": "CAM-TRONG-PHONG",
+    "ast_pb_cam_s01_a": {
+      "id": "ast_pb_cam_s01_a",
+      "name": "CAM-SAN-01A",
       "category": "camera",
       "vendor": "Hikvision",
-      "model": "DS-2CD2146G2-I",
-      "assetTag": "PB-CAM-IN",
+      "model": "DS-2CD2146G2-ISU (4MP PoE)",
+      "assetTag": "PB-CAM-01",
+      "serialNumber": "SNPB2026C01",
       "ipAddress": "192.168.40.101",
+      "subnetMask": "255.255.255.0",
+      "gateway": "192.168.40.1",
+      "macAddress": "00:1A:2B:40:01:01",
       "vlan": "40",
-      "poeEnabled": true,
-      "poeWatts": 8,
       "status": "online",
+      "powerWatts": 10,
+      "weightKg": 0.6,
+      "poeEnabled": true,
+      "poeWatts": 10,
+      "cameraSpecs": {
+        "resolution": "4MP (2688x1520)",
+        "lensMm": 2.8,
+        "fovAngle": 103,
+        "irDistanceMeters": 30,
+        "nvrChannel": 1
+      },
       "buildingId": "bld_pb_complex",
       "floorId": "flr_pb_main",
-      "roomId": "rm_pb_ctrl",
-      "ports": [{ "id": "port_1", "name": "PoE_In", "type": "RJ45_1G", "poe": true, "status": "up" }]
+      "roomId": "rm_pb_court_01",
+      "ports": [
+        {
+          "id": "port_1",
+          "name": "RJ45_PoE",
+          "type": "RJ45_1G",
+          "poe": true,
+          "speed": "1 Gbps",
+          "status": "up",
+          "connectedCableId": "cab_pb_01",
+          "connectedTarget": {
+            "deviceId": "ast_pb_sw",
+            "portId": "port_1"
+          }
+        }
+      ]
     },
-    "ast_pb_cam_out_ctrl": {
-      "id": "ast_pb_cam_out_ctrl",
-      "name": "CAM-NGOAI-PHONG-DK",
+    "ast_pb_cam_s01_b": {
+      "id": "ast_pb_cam_s01_b",
+      "name": "CAM-SAN-01B",
       "category": "camera",
       "vendor": "Hikvision",
-      "model": "DS-2CD2086G2-IU",
-      "assetTag": "PB-CAM-OUT-CTRL",
+      "model": "DS-2CD2146G2-ISU (4MP PoE)",
+      "assetTag": "PB-CAM-02",
+      "serialNumber": "SNPB2026C02",
       "ipAddress": "192.168.40.102",
+      "subnetMask": "255.255.255.0",
+      "gateway": "192.168.40.1",
+      "macAddress": "00:1A:2B:40:01:02",
       "vlan": "40",
-      "poeEnabled": true,
-      "poeWatts": 12,
       "status": "online",
+      "powerWatts": 10,
+      "weightKg": 0.6,
+      "poeEnabled": true,
+      "poeWatts": 10,
+      "cameraSpecs": {
+        "resolution": "4MP (2688x1520)",
+        "lensMm": 2.8,
+        "fovAngle": 103,
+        "irDistanceMeters": 30,
+        "nvrChannel": 2
+      },
       "buildingId": "bld_pb_complex",
       "floorId": "flr_pb_main",
-      "roomId": "rm_pb_ctrl",
-      "ports": [{ "id": "port_1", "name": "PoE_In", "type": "RJ45_1G", "poe": true, "status": "up" }]
+      "roomId": "rm_pb_court_01",
+      "ports": [
+        {
+          "id": "port_1",
+          "name": "RJ45_PoE",
+          "type": "RJ45_1G",
+          "poe": true,
+          "speed": "1 Gbps",
+          "status": "up",
+          "connectedCableId": "cab_pb_02",
+          "connectedTarget": {
+            "deviceId": "ast_pb_sw",
+            "portId": "port_2"
+          }
+        }
+      ]
+    },
+    "ast_pb_cam_s02_a": {
+      "id": "ast_pb_cam_s02_a",
+      "name": "CAM-SAN-02A",
+      "category": "camera",
+      "vendor": "Hikvision",
+      "model": "DS-2CD2146G2-ISU (4MP PoE)",
+      "assetTag": "PB-CAM-03",
+      "serialNumber": "SNPB2026C03",
+      "ipAddress": "192.168.40.103",
+      "subnetMask": "255.255.255.0",
+      "gateway": "192.168.40.1",
+      "macAddress": "00:1A:2B:40:01:03",
+      "vlan": "40",
+      "status": "online",
+      "powerWatts": 10,
+      "weightKg": 0.6,
+      "poeEnabled": true,
+      "poeWatts": 10,
+      "cameraSpecs": {
+        "resolution": "4MP (2688x1520)",
+        "lensMm": 2.8,
+        "fovAngle": 103,
+        "irDistanceMeters": 30,
+        "nvrChannel": 3
+      },
+      "buildingId": "bld_pb_complex",
+      "floorId": "flr_pb_main",
+      "roomId": "rm_pb_court_02",
+      "ports": [
+        {
+          "id": "port_1",
+          "name": "RJ45_PoE",
+          "type": "RJ45_1G",
+          "poe": true,
+          "speed": "1 Gbps",
+          "status": "up",
+          "connectedCableId": "cab_pb_03",
+          "connectedTarget": {
+            "deviceId": "ast_pb_sw",
+            "portId": "port_3"
+          }
+        }
+      ]
+    },
+    "ast_pb_cam_s02_b": {
+      "id": "ast_pb_cam_s02_b",
+      "name": "CAM-SAN-02B",
+      "category": "camera",
+      "vendor": "Hikvision",
+      "model": "DS-2CD2146G2-ISU (4MP PoE)",
+      "assetTag": "PB-CAM-04",
+      "serialNumber": "SNPB2026C04",
+      "ipAddress": "192.168.40.104",
+      "subnetMask": "255.255.255.0",
+      "gateway": "192.168.40.1",
+      "macAddress": "00:1A:2B:40:01:04",
+      "vlan": "40",
+      "status": "online",
+      "powerWatts": 10,
+      "weightKg": 0.6,
+      "poeEnabled": true,
+      "poeWatts": 10,
+      "cameraSpecs": {
+        "resolution": "4MP (2688x1520)",
+        "lensMm": 2.8,
+        "fovAngle": 103,
+        "irDistanceMeters": 30,
+        "nvrChannel": 4
+      },
+      "buildingId": "bld_pb_complex",
+      "floorId": "flr_pb_main",
+      "roomId": "rm_pb_court_02",
+      "ports": [
+        {
+          "id": "port_1",
+          "name": "RJ45_PoE",
+          "type": "RJ45_1G",
+          "poe": true,
+          "speed": "1 Gbps",
+          "status": "up",
+          "connectedCableId": "cab_pb_04",
+          "connectedTarget": {
+            "deviceId": "ast_pb_sw",
+            "portId": "port_4"
+          }
+        }
+      ]
+    },
+    "ast_pb_cam_s03_a": {
+      "id": "ast_pb_cam_s03_a",
+      "name": "CAM-SAN-03A",
+      "category": "camera",
+      "vendor": "Hikvision",
+      "model": "DS-2CD2146G2-ISU (4MP PoE)",
+      "assetTag": "PB-CAM-05",
+      "serialNumber": "SNPB2026C05",
+      "ipAddress": "192.168.40.105",
+      "subnetMask": "255.255.255.0",
+      "gateway": "192.168.40.1",
+      "macAddress": "00:1A:2B:40:01:05",
+      "vlan": "40",
+      "status": "online",
+      "powerWatts": 10,
+      "weightKg": 0.6,
+      "poeEnabled": true,
+      "poeWatts": 10,
+      "cameraSpecs": {
+        "resolution": "4MP (2688x1520)",
+        "lensMm": 2.8,
+        "fovAngle": 103,
+        "irDistanceMeters": 30,
+        "nvrChannel": 5
+      },
+      "buildingId": "bld_pb_complex",
+      "floorId": "flr_pb_main",
+      "roomId": "rm_pb_court_03",
+      "ports": [
+        {
+          "id": "port_1",
+          "name": "RJ45_PoE",
+          "type": "RJ45_1G",
+          "poe": true,
+          "speed": "1 Gbps",
+          "status": "up",
+          "connectedCableId": "cab_pb_05",
+          "connectedTarget": {
+            "deviceId": "ast_pb_sw",
+            "portId": "port_5"
+          }
+        }
+      ]
+    },
+    "ast_pb_cam_s03_b": {
+      "id": "ast_pb_cam_s03_b",
+      "name": "CAM-SAN-03B",
+      "category": "camera",
+      "vendor": "Hikvision",
+      "model": "DS-2CD2146G2-ISU (4MP PoE)",
+      "assetTag": "PB-CAM-06",
+      "serialNumber": "SNPB2026C06",
+      "ipAddress": "192.168.40.106",
+      "subnetMask": "255.255.255.0",
+      "gateway": "192.168.40.1",
+      "macAddress": "00:1A:2B:40:01:06",
+      "vlan": "40",
+      "status": "online",
+      "powerWatts": 10,
+      "weightKg": 0.6,
+      "poeEnabled": true,
+      "poeWatts": 10,
+      "cameraSpecs": {
+        "resolution": "4MP (2688x1520)",
+        "lensMm": 2.8,
+        "fovAngle": 103,
+        "irDistanceMeters": 30,
+        "nvrChannel": 6
+      },
+      "buildingId": "bld_pb_complex",
+      "floorId": "flr_pb_main",
+      "roomId": "rm_pb_court_03",
+      "ports": [
+        {
+          "id": "port_1",
+          "name": "RJ45_PoE",
+          "type": "RJ45_1G",
+          "poe": true,
+          "speed": "1 Gbps",
+          "status": "up",
+          "connectedCableId": "cab_pb_06",
+          "connectedTarget": {
+            "deviceId": "ast_pb_sw",
+            "portId": "port_6"
+          }
+        }
+      ]
+    },
+    "ast_pb_cam_s04_a": {
+      "id": "ast_pb_cam_s04_a",
+      "name": "CAM-SAN-04A",
+      "category": "camera",
+      "vendor": "Hikvision",
+      "model": "DS-2CD2146G2-ISU (4MP PoE)",
+      "assetTag": "PB-CAM-07",
+      "serialNumber": "SNPB2026C07",
+      "ipAddress": "192.168.40.107",
+      "subnetMask": "255.255.255.0",
+      "gateway": "192.168.40.1",
+      "macAddress": "00:1A:2B:40:01:07",
+      "vlan": "40",
+      "status": "online",
+      "powerWatts": 10,
+      "weightKg": 0.6,
+      "poeEnabled": true,
+      "poeWatts": 10,
+      "cameraSpecs": {
+        "resolution": "4MP (2688x1520)",
+        "lensMm": 2.8,
+        "fovAngle": 103,
+        "irDistanceMeters": 30,
+        "nvrChannel": 7
+      },
+      "buildingId": "bld_pb_complex",
+      "floorId": "flr_pb_main",
+      "roomId": "rm_pb_court_04",
+      "ports": [
+        {
+          "id": "port_1",
+          "name": "RJ45_PoE",
+          "type": "RJ45_1G",
+          "poe": true,
+          "speed": "1 Gbps",
+          "status": "up",
+          "connectedCableId": "cab_pb_07",
+          "connectedTarget": {
+            "deviceId": "ast_pb_sw",
+            "portId": "port_7"
+          }
+        }
+      ]
+    },
+    "ast_pb_cam_s04_b": {
+      "id": "ast_pb_cam_s04_b",
+      "name": "CAM-SAN-04B",
+      "category": "camera",
+      "vendor": "Hikvision",
+      "model": "DS-2CD2146G2-ISU (4MP PoE)",
+      "assetTag": "PB-CAM-08",
+      "serialNumber": "SNPB2026C08",
+      "ipAddress": "192.168.40.108",
+      "subnetMask": "255.255.255.0",
+      "gateway": "192.168.40.1",
+      "macAddress": "00:1A:2B:40:01:08",
+      "vlan": "40",
+      "status": "online",
+      "powerWatts": 10,
+      "weightKg": 0.6,
+      "poeEnabled": true,
+      "poeWatts": 10,
+      "cameraSpecs": {
+        "resolution": "4MP (2688x1520)",
+        "lensMm": 2.8,
+        "fovAngle": 103,
+        "irDistanceMeters": 30,
+        "nvrChannel": 8
+      },
+      "buildingId": "bld_pb_complex",
+      "floorId": "flr_pb_main",
+      "roomId": "rm_pb_court_04",
+      "ports": [
+        {
+          "id": "port_1",
+          "name": "RJ45_PoE",
+          "type": "RJ45_1G",
+          "poe": true,
+          "speed": "1 Gbps",
+          "status": "up",
+          "connectedCableId": "cab_pb_08",
+          "connectedTarget": {
+            "deviceId": "ast_pb_sw",
+            "portId": "port_8"
+          }
+        }
+      ]
+    },
+    "ast_pb_cam_s05_a": {
+      "id": "ast_pb_cam_s05_a",
+      "name": "CAM-SAN-05A",
+      "category": "camera",
+      "vendor": "Hikvision",
+      "model": "DS-2CD2146G2-ISU (4MP PoE)",
+      "assetTag": "PB-CAM-09",
+      "serialNumber": "SNPB2026C09",
+      "ipAddress": "192.168.40.109",
+      "subnetMask": "255.255.255.0",
+      "gateway": "192.168.40.1",
+      "macAddress": "00:1A:2B:40:01:09",
+      "vlan": "40",
+      "status": "online",
+      "powerWatts": 10,
+      "weightKg": 0.6,
+      "poeEnabled": true,
+      "poeWatts": 10,
+      "cameraSpecs": {
+        "resolution": "4MP (2688x1520)",
+        "lensMm": 2.8,
+        "fovAngle": 103,
+        "irDistanceMeters": 30,
+        "nvrChannel": 9
+      },
+      "buildingId": "bld_pb_complex",
+      "floorId": "flr_pb_main",
+      "roomId": "rm_pb_court_05",
+      "ports": [
+        {
+          "id": "port_1",
+          "name": "RJ45_PoE",
+          "type": "RJ45_1G",
+          "poe": true,
+          "speed": "1 Gbps",
+          "status": "up",
+          "connectedCableId": "cab_pb_09",
+          "connectedTarget": {
+            "deviceId": "ast_pb_sw",
+            "portId": "port_9"
+          }
+        }
+      ]
+    },
+    "ast_pb_cam_s05_b": {
+      "id": "ast_pb_cam_s05_b",
+      "name": "CAM-SAN-05B",
+      "category": "camera",
+      "vendor": "Hikvision",
+      "model": "DS-2CD2146G2-ISU (4MP PoE)",
+      "assetTag": "PB-CAM-10",
+      "serialNumber": "SNPB2026C10",
+      "ipAddress": "192.168.40.110",
+      "subnetMask": "255.255.255.0",
+      "gateway": "192.168.40.1",
+      "macAddress": "00:1A:2B:40:01:0A",
+      "vlan": "40",
+      "status": "online",
+      "powerWatts": 10,
+      "weightKg": 0.6,
+      "poeEnabled": true,
+      "poeWatts": 10,
+      "cameraSpecs": {
+        "resolution": "4MP (2688x1520)",
+        "lensMm": 2.8,
+        "fovAngle": 103,
+        "irDistanceMeters": 30,
+        "nvrChannel": 10
+      },
+      "buildingId": "bld_pb_complex",
+      "floorId": "flr_pb_main",
+      "roomId": "rm_pb_court_05",
+      "ports": [
+        {
+          "id": "port_1",
+          "name": "RJ45_PoE",
+          "type": "RJ45_1G",
+          "poe": true,
+          "speed": "1 Gbps",
+          "status": "up",
+          "connectedCableId": "cab_pb_10",
+          "connectedTarget": {
+            "deviceId": "ast_pb_sw",
+            "portId": "port_10"
+          }
+        }
+      ]
+    },
+    "ast_pb_cam_s06_a": {
+      "id": "ast_pb_cam_s06_a",
+      "name": "CAM-SAN-06A",
+      "category": "camera",
+      "vendor": "Hikvision",
+      "model": "DS-2CD2146G2-ISU (4MP PoE)",
+      "assetTag": "PB-CAM-11",
+      "serialNumber": "SNPB2026C11",
+      "ipAddress": "192.168.40.111",
+      "subnetMask": "255.255.255.0",
+      "gateway": "192.168.40.1",
+      "macAddress": "00:1A:2B:40:01:0B",
+      "vlan": "40",
+      "status": "online",
+      "powerWatts": 10,
+      "weightKg": 0.6,
+      "poeEnabled": true,
+      "poeWatts": 10,
+      "cameraSpecs": {
+        "resolution": "4MP (2688x1520)",
+        "lensMm": 2.8,
+        "fovAngle": 103,
+        "irDistanceMeters": 30,
+        "nvrChannel": 11
+      },
+      "buildingId": "bld_pb_complex",
+      "floorId": "flr_pb_main",
+      "roomId": "rm_pb_court_06",
+      "ports": [
+        {
+          "id": "port_1",
+          "name": "RJ45_PoE",
+          "type": "RJ45_1G",
+          "poe": true,
+          "speed": "1 Gbps",
+          "status": "up",
+          "connectedCableId": "cab_pb_11",
+          "connectedTarget": {
+            "deviceId": "ast_pb_sw",
+            "portId": "port_11"
+          }
+        }
+      ]
+    },
+    "ast_pb_cam_s06_b": {
+      "id": "ast_pb_cam_s06_b",
+      "name": "CAM-SAN-06B",
+      "category": "camera",
+      "vendor": "Hikvision",
+      "model": "DS-2CD2146G2-ISU (4MP PoE)",
+      "assetTag": "PB-CAM-12",
+      "serialNumber": "SNPB2026C12",
+      "ipAddress": "192.168.40.112",
+      "subnetMask": "255.255.255.0",
+      "gateway": "192.168.40.1",
+      "macAddress": "00:1A:2B:40:01:0C",
+      "vlan": "40",
+      "status": "online",
+      "powerWatts": 10,
+      "weightKg": 0.6,
+      "poeEnabled": true,
+      "poeWatts": 10,
+      "cameraSpecs": {
+        "resolution": "4MP (2688x1520)",
+        "lensMm": 2.8,
+        "fovAngle": 103,
+        "irDistanceMeters": 30,
+        "nvrChannel": 12
+      },
+      "buildingId": "bld_pb_complex",
+      "floorId": "flr_pb_main",
+      "roomId": "rm_pb_court_06",
+      "ports": [
+        {
+          "id": "port_1",
+          "name": "RJ45_PoE",
+          "type": "RJ45_1G",
+          "poe": true,
+          "speed": "1 Gbps",
+          "status": "up",
+          "connectedCableId": "cab_pb_12",
+          "connectedTarget": {
+            "deviceId": "ast_pb_sw",
+            "portId": "port_12"
+          }
+        }
+      ]
+    },
+    "ast_pb_cam_s07_a": {
+      "id": "ast_pb_cam_s07_a",
+      "name": "CAM-SAN-07A",
+      "category": "camera",
+      "vendor": "Hikvision",
+      "model": "DS-2CD2146G2-ISU (4MP PoE)",
+      "assetTag": "PB-CAM-13",
+      "serialNumber": "SNPB2026C13",
+      "ipAddress": "192.168.40.113",
+      "subnetMask": "255.255.255.0",
+      "gateway": "192.168.40.1",
+      "macAddress": "00:1A:2B:40:01:0D",
+      "vlan": "40",
+      "status": "online",
+      "powerWatts": 10,
+      "weightKg": 0.6,
+      "poeEnabled": true,
+      "poeWatts": 10,
+      "cameraSpecs": {
+        "resolution": "4MP (2688x1520)",
+        "lensMm": 2.8,
+        "fovAngle": 103,
+        "irDistanceMeters": 30,
+        "nvrChannel": 13
+      },
+      "buildingId": "bld_pb_complex",
+      "floorId": "flr_pb_main",
+      "roomId": "rm_pb_court_07",
+      "ports": [
+        {
+          "id": "port_1",
+          "name": "RJ45_PoE",
+          "type": "RJ45_1G",
+          "poe": true,
+          "speed": "1 Gbps",
+          "status": "up",
+          "connectedCableId": "cab_pb_13",
+          "connectedTarget": {
+            "deviceId": "ast_pb_sw",
+            "portId": "port_13"
+          }
+        }
+      ]
+    },
+    "ast_pb_cam_s07_b": {
+      "id": "ast_pb_cam_s07_b",
+      "name": "CAM-SAN-07B",
+      "category": "camera",
+      "vendor": "Hikvision",
+      "model": "DS-2CD2146G2-ISU (4MP PoE)",
+      "assetTag": "PB-CAM-14",
+      "serialNumber": "SNPB2026C14",
+      "ipAddress": "192.168.40.114",
+      "subnetMask": "255.255.255.0",
+      "gateway": "192.168.40.1",
+      "macAddress": "00:1A:2B:40:01:0E",
+      "vlan": "40",
+      "status": "online",
+      "powerWatts": 10,
+      "weightKg": 0.6,
+      "poeEnabled": true,
+      "poeWatts": 10,
+      "cameraSpecs": {
+        "resolution": "4MP (2688x1520)",
+        "lensMm": 2.8,
+        "fovAngle": 103,
+        "irDistanceMeters": 30,
+        "nvrChannel": 14
+      },
+      "buildingId": "bld_pb_complex",
+      "floorId": "flr_pb_main",
+      "roomId": "rm_pb_court_07",
+      "ports": [
+        {
+          "id": "port_1",
+          "name": "RJ45_PoE",
+          "type": "RJ45_1G",
+          "poe": true,
+          "speed": "1 Gbps",
+          "status": "up",
+          "connectedCableId": "cab_pb_14",
+          "connectedTarget": {
+            "deviceId": "ast_pb_sw",
+            "portId": "port_14"
+          }
+        }
+      ]
+    },
+    "ast_pb_cam_s08_a": {
+      "id": "ast_pb_cam_s08_a",
+      "name": "CAM-SAN-08A",
+      "category": "camera",
+      "vendor": "Hikvision",
+      "model": "DS-2CD2146G2-ISU (4MP PoE)",
+      "assetTag": "PB-CAM-15",
+      "serialNumber": "SNPB2026C15",
+      "ipAddress": "192.168.40.115",
+      "subnetMask": "255.255.255.0",
+      "gateway": "192.168.40.1",
+      "macAddress": "00:1A:2B:40:01:0F",
+      "vlan": "40",
+      "status": "online",
+      "powerWatts": 10,
+      "weightKg": 0.6,
+      "poeEnabled": true,
+      "poeWatts": 10,
+      "cameraSpecs": {
+        "resolution": "4MP (2688x1520)",
+        "lensMm": 2.8,
+        "fovAngle": 103,
+        "irDistanceMeters": 30,
+        "nvrChannel": 15
+      },
+      "buildingId": "bld_pb_complex",
+      "floorId": "flr_pb_main",
+      "roomId": "rm_pb_court_08",
+      "ports": [
+        {
+          "id": "port_1",
+          "name": "RJ45_PoE",
+          "type": "RJ45_1G",
+          "poe": true,
+          "speed": "1 Gbps",
+          "status": "up",
+          "connectedCableId": "cab_pb_15",
+          "connectedTarget": {
+            "deviceId": "ast_pb_sw",
+            "portId": "port_15"
+          }
+        }
+      ]
+    },
+    "ast_pb_cam_s08_b": {
+      "id": "ast_pb_cam_s08_b",
+      "name": "CAM-SAN-08B",
+      "category": "camera",
+      "vendor": "Hikvision",
+      "model": "DS-2CD2146G2-ISU (4MP PoE)",
+      "assetTag": "PB-CAM-16",
+      "serialNumber": "SNPB2026C16",
+      "ipAddress": "192.168.40.116",
+      "subnetMask": "255.255.255.0",
+      "gateway": "192.168.40.1",
+      "macAddress": "00:1A:2B:40:01:10",
+      "vlan": "40",
+      "status": "online",
+      "powerWatts": 10,
+      "weightKg": 0.6,
+      "poeEnabled": true,
+      "poeWatts": 10,
+      "cameraSpecs": {
+        "resolution": "4MP (2688x1520)",
+        "lensMm": 2.8,
+        "fovAngle": 103,
+        "irDistanceMeters": 30,
+        "nvrChannel": 16
+      },
+      "buildingId": "bld_pb_complex",
+      "floorId": "flr_pb_main",
+      "roomId": "rm_pb_court_08",
+      "ports": [
+        {
+          "id": "port_1",
+          "name": "RJ45_PoE",
+          "type": "RJ45_1G",
+          "poe": true,
+          "speed": "1 Gbps",
+          "status": "up",
+          "connectedCableId": "cab_pb_16",
+          "connectedTarget": {
+            "deviceId": "ast_pb_sw",
+            "portId": "port_16"
+          }
+        }
+      ]
+    },
+    "ast_pb_cam_s09_a": {
+      "id": "ast_pb_cam_s09_a",
+      "name": "CAM-SAN-09A",
+      "category": "camera",
+      "vendor": "Hikvision",
+      "model": "DS-2CD2146G2-ISU (4MP PoE)",
+      "assetTag": "PB-CAM-17",
+      "serialNumber": "SNPB2026C17",
+      "ipAddress": "192.168.40.117",
+      "subnetMask": "255.255.255.0",
+      "gateway": "192.168.40.1",
+      "macAddress": "00:1A:2B:40:01:11",
+      "vlan": "40",
+      "status": "online",
+      "powerWatts": 10,
+      "weightKg": 0.6,
+      "poeEnabled": true,
+      "poeWatts": 10,
+      "cameraSpecs": {
+        "resolution": "4MP (2688x1520)",
+        "lensMm": 2.8,
+        "fovAngle": 103,
+        "irDistanceMeters": 30,
+        "nvrChannel": 17
+      },
+      "buildingId": "bld_pb_complex",
+      "floorId": "flr_pb_main",
+      "roomId": "rm_pb_court_09",
+      "ports": [
+        {
+          "id": "port_1",
+          "name": "RJ45_PoE",
+          "type": "RJ45_1G",
+          "poe": true,
+          "speed": "1 Gbps",
+          "status": "up",
+          "connectedCableId": "cab_pb_17",
+          "connectedTarget": {
+            "deviceId": "ast_pb_sw",
+            "portId": "port_17"
+          }
+        }
+      ]
+    },
+    "ast_pb_cam_s09_b": {
+      "id": "ast_pb_cam_s09_b",
+      "name": "CAM-SAN-09B",
+      "category": "camera",
+      "vendor": "Hikvision",
+      "model": "DS-2CD2146G2-ISU (4MP PoE)",
+      "assetTag": "PB-CAM-18",
+      "serialNumber": "SNPB2026C18",
+      "ipAddress": "192.168.40.118",
+      "subnetMask": "255.255.255.0",
+      "gateway": "192.168.40.1",
+      "macAddress": "00:1A:2B:40:01:12",
+      "vlan": "40",
+      "status": "online",
+      "powerWatts": 10,
+      "weightKg": 0.6,
+      "poeEnabled": true,
+      "poeWatts": 10,
+      "cameraSpecs": {
+        "resolution": "4MP (2688x1520)",
+        "lensMm": 2.8,
+        "fovAngle": 103,
+        "irDistanceMeters": 30,
+        "nvrChannel": 18
+      },
+      "buildingId": "bld_pb_complex",
+      "floorId": "flr_pb_main",
+      "roomId": "rm_pb_court_09",
+      "ports": [
+        {
+          "id": "port_1",
+          "name": "RJ45_PoE",
+          "type": "RJ45_1G",
+          "poe": true,
+          "speed": "1 Gbps",
+          "status": "up",
+          "connectedCableId": "cab_pb_18",
+          "connectedTarget": {
+            "deviceId": "ast_pb_sw",
+            "portId": "port_18"
+          }
+        }
+      ]
+    },
+    "ast_pb_cam_s10_a": {
+      "id": "ast_pb_cam_s10_a",
+      "name": "CAM-SAN-10A",
+      "category": "camera",
+      "vendor": "Hikvision",
+      "model": "DS-2CD2146G2-ISU (4MP PoE)",
+      "assetTag": "PB-CAM-19",
+      "serialNumber": "SNPB2026C19",
+      "ipAddress": "192.168.40.119",
+      "subnetMask": "255.255.255.0",
+      "gateway": "192.168.40.1",
+      "macAddress": "00:1A:2B:40:01:13",
+      "vlan": "40",
+      "status": "online",
+      "powerWatts": 10,
+      "weightKg": 0.6,
+      "poeEnabled": true,
+      "poeWatts": 10,
+      "cameraSpecs": {
+        "resolution": "4MP (2688x1520)",
+        "lensMm": 2.8,
+        "fovAngle": 103,
+        "irDistanceMeters": 30,
+        "nvrChannel": 19
+      },
+      "buildingId": "bld_pb_complex",
+      "floorId": "flr_pb_main",
+      "roomId": "rm_pb_court_10",
+      "ports": [
+        {
+          "id": "port_1",
+          "name": "RJ45_PoE",
+          "type": "RJ45_1G",
+          "poe": true,
+          "speed": "1 Gbps",
+          "status": "up",
+          "connectedCableId": "cab_pb_19",
+          "connectedTarget": {
+            "deviceId": "ast_pb_sw",
+            "portId": "port_19"
+          }
+        }
+      ]
+    },
+    "ast_pb_cam_s10_b": {
+      "id": "ast_pb_cam_s10_b",
+      "name": "CAM-SAN-10B",
+      "category": "camera",
+      "vendor": "Hikvision",
+      "model": "DS-2CD2146G2-ISU (4MP PoE)",
+      "assetTag": "PB-CAM-20",
+      "serialNumber": "SNPB2026C20",
+      "ipAddress": "192.168.40.120",
+      "subnetMask": "255.255.255.0",
+      "gateway": "192.168.40.1",
+      "macAddress": "00:1A:2B:40:01:14",
+      "vlan": "40",
+      "status": "online",
+      "powerWatts": 10,
+      "weightKg": 0.6,
+      "poeEnabled": true,
+      "poeWatts": 10,
+      "cameraSpecs": {
+        "resolution": "4MP (2688x1520)",
+        "lensMm": 2.8,
+        "fovAngle": 103,
+        "irDistanceMeters": 30,
+        "nvrChannel": 20
+      },
+      "buildingId": "bld_pb_complex",
+      "floorId": "flr_pb_main",
+      "roomId": "rm_pb_court_10",
+      "ports": [
+        {
+          "id": "port_1",
+          "name": "RJ45_PoE",
+          "type": "RJ45_1G",
+          "poe": true,
+          "speed": "1 Gbps",
+          "status": "up",
+          "connectedCableId": "cab_pb_20",
+          "connectedTarget": {
+            "deviceId": "ast_pb_sw",
+            "portId": "port_20"
+          }
+        }
+      ]
     },
     "ast_pb_cam_gate": {
       "id": "ast_pb_cam_gate",
       "name": "CAM-CONG-VAO",
       "category": "camera",
       "vendor": "Hikvision",
-      "model": "DS-2CD2086G2-IU",
-      "assetTag": "PB-CAM-GATE",
-      "ipAddress": "192.168.40.103",
+      "model": "DS-2CD2146G2-ISU (4MP PoE)",
+      "assetTag": "PB-CAM-21",
+      "serialNumber": "SNPB2026C21",
+      "ipAddress": "192.168.40.121",
+      "subnetMask": "255.255.255.0",
+      "gateway": "192.168.40.1",
+      "macAddress": "00:1A:2B:40:01:15",
       "vlan": "40",
-      "poeEnabled": true,
-      "poeWatts": 12,
       "status": "online",
+      "powerWatts": 10,
+      "weightKg": 0.6,
+      "poeEnabled": true,
+      "poeWatts": 10,
+      "cameraSpecs": {
+        "resolution": "4MP (2688x1520)",
+        "lensMm": 2.8,
+        "fovAngle": 103,
+        "irDistanceMeters": 30,
+        "nvrChannel": 21
+      },
       "buildingId": "bld_pb_complex",
       "floorId": "flr_pb_main",
       "roomId": "rm_pb_gate_park",
-      "ports": [{ "id": "port_1", "name": "PoE_In", "type": "RJ45_1G", "poe": true, "status": "up" }]
+      "ports": [
+        {
+          "id": "port_1",
+          "name": "RJ45_PoE",
+          "type": "RJ45_1G",
+          "poe": true,
+          "speed": "1 Gbps",
+          "status": "up",
+          "connectedCableId": "cab_pb_21",
+          "connectedTarget": {
+            "deviceId": "ast_pb_sw",
+            "portId": "port_21"
+          }
+        }
+      ]
     },
     "ast_pb_cam_park": {
       "id": "ast_pb_cam_park",
       "name": "CAM-BAI-DO-XE",
       "category": "camera",
       "vendor": "Hikvision",
-      "model": "DS-2CD2086G2-IU",
-      "assetTag": "PB-CAM-PARK",
-      "ipAddress": "192.168.40.104",
+      "model": "DS-2CD2146G2-ISU (4MP PoE)",
+      "assetTag": "PB-CAM-22",
+      "serialNumber": "SNPB2026C22",
+      "ipAddress": "192.168.40.122",
+      "subnetMask": "255.255.255.0",
+      "gateway": "192.168.40.1",
+      "macAddress": "00:1A:2B:40:01:16",
       "vlan": "40",
-      "poeEnabled": true,
-      "poeWatts": 12,
       "status": "online",
+      "powerWatts": 10,
+      "weightKg": 0.6,
+      "poeEnabled": true,
+      "poeWatts": 10,
+      "cameraSpecs": {
+        "resolution": "4MP (2688x1520)",
+        "lensMm": 2.8,
+        "fovAngle": 103,
+        "irDistanceMeters": 30,
+        "nvrChannel": 22
+      },
       "buildingId": "bld_pb_complex",
       "floorId": "flr_pb_main",
       "roomId": "rm_pb_gate_park",
-      "ports": [{ "id": "port_1", "name": "PoE_In", "type": "RJ45_1G", "poe": true, "status": "up" }]
+      "ports": [
+        {
+          "id": "port_1",
+          "name": "RJ45_PoE",
+          "type": "RJ45_1G",
+          "poe": true,
+          "speed": "1 Gbps",
+          "status": "up",
+          "connectedCableId": "cab_pb_22",
+          "connectedTarget": {
+            "deviceId": "ast_pb_sw",
+            "portId": "port_22"
+          }
+        }
+      ]
+    },
+    "ast_pb_cam_ctrl_in": {
+      "id": "ast_pb_cam_ctrl_in",
+      "name": "CAM-TRONG-PHONG",
+      "category": "camera",
+      "vendor": "Hikvision",
+      "model": "DS-2CD2146G2-ISU (4MP PoE)",
+      "assetTag": "PB-CAM-23",
+      "serialNumber": "SNPB2026C23",
+      "ipAddress": "192.168.40.123",
+      "subnetMask": "255.255.255.0",
+      "gateway": "192.168.40.1",
+      "macAddress": "00:1A:2B:40:01:17",
+      "vlan": "40",
+      "status": "online",
+      "powerWatts": 10,
+      "weightKg": 0.6,
+      "poeEnabled": true,
+      "poeWatts": 10,
+      "cameraSpecs": {
+        "resolution": "4MP (2688x1520)",
+        "lensMm": 2.8,
+        "fovAngle": 103,
+        "irDistanceMeters": 30,
+        "nvrChannel": 23
+      },
+      "buildingId": "bld_pb_complex",
+      "floorId": "flr_pb_main",
+      "roomId": "rm_pb_ctrl",
+      "ports": [
+        {
+          "id": "port_1",
+          "name": "RJ45_PoE",
+          "type": "RJ45_1G",
+          "poe": true,
+          "speed": "1 Gbps",
+          "status": "up",
+          "connectedCableId": "cab_pb_23",
+          "connectedTarget": {
+            "deviceId": "ast_pb_sw",
+            "portId": "port_23"
+          }
+        }
+      ]
+    },
+    "ast_pb_cam_ctrl_out": {
+      "id": "ast_pb_cam_ctrl_out",
+      "name": "CAM-NGOAI-PHONG",
+      "category": "camera",
+      "vendor": "Hikvision",
+      "model": "DS-2CD2146G2-ISU (4MP PoE)",
+      "assetTag": "PB-CAM-24",
+      "serialNumber": "SNPB2026C24",
+      "ipAddress": "192.168.40.124",
+      "subnetMask": "255.255.255.0",
+      "gateway": "192.168.40.1",
+      "macAddress": "00:1A:2B:40:01:18",
+      "vlan": "40",
+      "status": "online",
+      "powerWatts": 10,
+      "weightKg": 0.6,
+      "poeEnabled": true,
+      "poeWatts": 10,
+      "cameraSpecs": {
+        "resolution": "4MP (2688x1520)",
+        "lensMm": 2.8,
+        "fovAngle": 103,
+        "irDistanceMeters": 30,
+        "nvrChannel": 24
+      },
+      "buildingId": "bld_pb_complex",
+      "floorId": "flr_pb_main",
+      "roomId": "rm_pb_ctrl",
+      "ports": [
+        {
+          "id": "port_1",
+          "name": "RJ45_PoE",
+          "type": "RJ45_1G",
+          "poe": true,
+          "speed": "1 Gbps",
+          "status": "up",
+          "connectedCableId": "cab_pb_24",
+          "connectedTarget": {
+            "deviceId": "ast_pb_sw",
+            "portId": "port_24"
+          }
+        }
+      ]
     }
   },
   "nodes": [
-    { "id": "node_pb_sw", "diagramMode": "topology", "floorId": "flr_pb_main", "type": "device", "assetId": "ast_pb_sw", "label": "SW-POE-CTRL-01", "x": 960, "y": 240, "width": 120, "height": 48, "rotation": 0 },
-    { "id": "node_pb_nvr", "diagramMode": "topology", "floorId": "flr_pb_main", "type": "device", "assetId": "ast_pb_nvr", "label": "NVR-32CH", "x": 960, "y": 170, "width": 120, "height": 48, "rotation": 0 },
-    { "id": "node_pb_pc", "diagramMode": "topology", "floorId": "flr_pb_main", "type": "device", "assetId": "ast_pb_pc", "label": "PC-DIEU-KHIEN", "x": 960, "y": 110, "width": 120, "height": 48, "rotation": 0 },
-    { "id": "node_pb_mon_small", "diagramMode": "topology", "floorId": "flr_pb_main", "type": "device", "assetId": "ast_pb_mon_small", "label": "Màn hình nhỏ", "x": 960, "y": 360, "width": 110, "height": 44, "rotation": 0 },
-    { "id": "node_pb_mon_large", "diagramMode": "topology", "floorId": "flr_pb_main", "type": "device", "assetId": "ast_pb_mon_large", "label": "Màn hình lớn", "x": 1120, "y": 220, "width": 120, "height": 50, "rotation": 0 },
-    { "id": "node_pb_cam_in", "diagramMode": "topology", "floorId": "flr_pb_main", "type": "device", "assetId": "ast_pb_cam_in", "label": "Cam trong phòng", "x": 1020, "y": 310, "width": 96, "height": 44, "rotation": 0 },
-    { "id": "node_pb_cam_out_ctrl", "diagramMode": "topology", "floorId": "flr_pb_main", "type": "device", "assetId": "ast_pb_cam_out_ctrl", "label": "Cam ngoài phòng", "x": 1120, "y": 120, "width": 100, "height": 44, "rotation": 0 },
-    { "id": "node_pb_cam_gate", "diagramMode": "topology", "floorId": "flr_pb_main", "type": "device", "assetId": "ast_pb_cam_gate", "label": "Cam cổng vào", "x": 140, "y": 650, "width": 96, "height": 44, "rotation": 0 },
-    { "id": "node_pb_cam_park", "diagramMode": "topology", "floorId": "flr_pb_main", "type": "device", "assetId": "ast_pb_cam_park", "label": "Cam bãi đỗ xe", "x": 360, "y": 600, "width": 96, "height": 44, "rotation": 0 }
+    {
+      "id": "node_pb_pc",
+      "diagramMode": "topology",
+      "floorId": "flr_pb_main",
+      "type": "device",
+      "assetId": "ast_pb_pc",
+      "label": "Máy tính (PC)",
+      "x": 772,
+      "y": 94,
+      "width": 90,
+      "height": 42,
+      "rotation": 0,
+      "style": {
+        "backgroundColor": "#334155",
+        "borderColor": "#1e293b",
+        "borderWidth": 2,
+        "borderStyle": "solid",
+        "opacity": 1,
+        "textColor": "#ffffff"
+      }
+    },
+    {
+      "id": "node_pb_nvr",
+      "diagramMode": "topology",
+      "floorId": "flr_pb_main",
+      "type": "device",
+      "assetId": "ast_pb_nvr",
+      "label": "Đầu ghi NVR",
+      "x": 772,
+      "y": 150,
+      "width": 90,
+      "height": 40,
+      "rotation": 0,
+      "style": {
+        "backgroundColor": "#d97706",
+        "borderColor": "#b45309",
+        "borderWidth": 2,
+        "borderStyle": "solid",
+        "opacity": 1,
+        "textColor": "#ffffff"
+      }
+    },
+    {
+      "id": "node_pb_sw",
+      "diagramMode": "topology",
+      "floorId": "flr_pb_main",
+      "type": "device",
+      "assetId": "ast_pb_sw",
+      "label": "Switch PoE",
+      "x": 772,
+      "y": 204,
+      "width": 90,
+      "height": 42,
+      "rotation": 0,
+      "style": {
+        "backgroundColor": "#0284c7",
+        "borderColor": "#0369a1",
+        "borderWidth": 2,
+        "borderStyle": "solid",
+        "opacity": 1,
+        "textColor": "#ffffff"
+      }
+    },
+    {
+      "id": "node_pb_mon_small",
+      "diagramMode": "topology",
+      "floorId": "flr_pb_main",
+      "type": "device",
+      "assetId": "ast_pb_mon_small",
+      "label": "Màn hình nhỏ",
+      "x": 772,
+      "y": 276,
+      "width": 90,
+      "height": 38,
+      "rotation": 0,
+      "style": {
+        "backgroundColor": "#2563eb",
+        "borderColor": "#1d4ed8",
+        "borderWidth": 2,
+        "borderStyle": "solid",
+        "opacity": 1,
+        "textColor": "#ffffff"
+      }
+    },
+    {
+      "id": "node_pb_mon_large",
+      "diagramMode": "topology",
+      "floorId": "flr_pb_main",
+      "type": "device",
+      "assetId": "ast_pb_mon_large",
+      "label": "Màn hình lớn",
+      "x": 902,
+      "y": 204,
+      "width": 104,
+      "height": 48,
+      "rotation": 0,
+      "style": {
+        "backgroundColor": "#1d4ed8",
+        "borderColor": "#1e40af",
+        "borderWidth": 2,
+        "borderStyle": "solid",
+        "opacity": 1,
+        "textColor": "#ffffff"
+      }
+    },
+    {
+      "id": "node_pb_cam_s01_a",
+      "diagramMode": "topology",
+      "floorId": "flr_pb_main",
+      "type": "device",
+      "assetId": "ast_pb_cam_s01_a",
+      "label": "Cam S01-A",
+      "x": 72,
+      "y": 70,
+      "width": 36,
+      "height": 32,
+      "rotation": 135,
+      "style": {
+        "backgroundColor": "#f59e0b",
+        "borderColor": "#d97706",
+        "borderWidth": 2,
+        "borderStyle": "solid",
+        "opacity": 1,
+        "textColor": "#ffffff"
+      },
+      "customData": {
+        "fov": 103,
+        "irDistance": 30
+      }
+    },
+    {
+      "id": "node_pb_cam_s01_b",
+      "diagramMode": "topology",
+      "floorId": "flr_pb_main",
+      "type": "device",
+      "assetId": "ast_pb_cam_s01_b",
+      "label": "Cam S01-B",
+      "x": 134,
+      "y": 286,
+      "width": 36,
+      "height": 32,
+      "rotation": 315,
+      "style": {
+        "backgroundColor": "#f59e0b",
+        "borderColor": "#d97706",
+        "borderWidth": 2,
+        "borderStyle": "solid",
+        "opacity": 1,
+        "textColor": "#ffffff"
+      },
+      "customData": {
+        "fov": 103,
+        "irDistance": 30
+      }
+    },
+    {
+      "id": "node_pb_cam_s02_a",
+      "diagramMode": "topology",
+      "floorId": "flr_pb_main",
+      "type": "device",
+      "assetId": "ast_pb_cam_s02_a",
+      "label": "Cam S02-A",
+      "x": 208,
+      "y": 70,
+      "width": 36,
+      "height": 32,
+      "rotation": 135,
+      "style": {
+        "backgroundColor": "#f59e0b",
+        "borderColor": "#d97706",
+        "borderWidth": 2,
+        "borderStyle": "solid",
+        "opacity": 1,
+        "textColor": "#ffffff"
+      },
+      "customData": {
+        "fov": 103,
+        "irDistance": 30
+      }
+    },
+    {
+      "id": "node_pb_cam_s02_b",
+      "diagramMode": "topology",
+      "floorId": "flr_pb_main",
+      "type": "device",
+      "assetId": "ast_pb_cam_s02_b",
+      "label": "Cam S02-B",
+      "x": 270,
+      "y": 286,
+      "width": 36,
+      "height": 32,
+      "rotation": 315,
+      "style": {
+        "backgroundColor": "#f59e0b",
+        "borderColor": "#d97706",
+        "borderWidth": 2,
+        "borderStyle": "solid",
+        "opacity": 1,
+        "textColor": "#ffffff"
+      },
+      "customData": {
+        "fov": 103,
+        "irDistance": 30
+      }
+    },
+    {
+      "id": "node_pb_cam_s03_a",
+      "diagramMode": "topology",
+      "floorId": "flr_pb_main",
+      "type": "device",
+      "assetId": "ast_pb_cam_s03_a",
+      "label": "Cam S03-A",
+      "x": 344,
+      "y": 70,
+      "width": 36,
+      "height": 32,
+      "rotation": 135,
+      "style": {
+        "backgroundColor": "#f59e0b",
+        "borderColor": "#d97706",
+        "borderWidth": 2,
+        "borderStyle": "solid",
+        "opacity": 1,
+        "textColor": "#ffffff"
+      },
+      "customData": {
+        "fov": 103,
+        "irDistance": 30
+      }
+    },
+    {
+      "id": "node_pb_cam_s03_b",
+      "diagramMode": "topology",
+      "floorId": "flr_pb_main",
+      "type": "device",
+      "assetId": "ast_pb_cam_s03_b",
+      "label": "Cam S03-B",
+      "x": 406,
+      "y": 286,
+      "width": 36,
+      "height": 32,
+      "rotation": 315,
+      "style": {
+        "backgroundColor": "#f59e0b",
+        "borderColor": "#d97706",
+        "borderWidth": 2,
+        "borderStyle": "solid",
+        "opacity": 1,
+        "textColor": "#ffffff"
+      },
+      "customData": {
+        "fov": 103,
+        "irDistance": 30
+      }
+    },
+    {
+      "id": "node_pb_cam_s04_a",
+      "diagramMode": "topology",
+      "floorId": "flr_pb_main",
+      "type": "device",
+      "assetId": "ast_pb_cam_s04_a",
+      "label": "Cam S04-A",
+      "x": 480,
+      "y": 70,
+      "width": 36,
+      "height": 32,
+      "rotation": 135,
+      "style": {
+        "backgroundColor": "#f59e0b",
+        "borderColor": "#d97706",
+        "borderWidth": 2,
+        "borderStyle": "solid",
+        "opacity": 1,
+        "textColor": "#ffffff"
+      },
+      "customData": {
+        "fov": 103,
+        "irDistance": 30
+      }
+    },
+    {
+      "id": "node_pb_cam_s04_b",
+      "diagramMode": "topology",
+      "floorId": "flr_pb_main",
+      "type": "device",
+      "assetId": "ast_pb_cam_s04_b",
+      "label": "Cam S04-B",
+      "x": 542,
+      "y": 286,
+      "width": 36,
+      "height": 32,
+      "rotation": 315,
+      "style": {
+        "backgroundColor": "#f59e0b",
+        "borderColor": "#d97706",
+        "borderWidth": 2,
+        "borderStyle": "solid",
+        "opacity": 1,
+        "textColor": "#ffffff"
+      },
+      "customData": {
+        "fov": 103,
+        "irDistance": 30
+      }
+    },
+    {
+      "id": "node_pb_cam_s05_a",
+      "diagramMode": "topology",
+      "floorId": "flr_pb_main",
+      "type": "device",
+      "assetId": "ast_pb_cam_s05_a",
+      "label": "Cam S05-A",
+      "x": 616,
+      "y": 70,
+      "width": 36,
+      "height": 32,
+      "rotation": 135,
+      "style": {
+        "backgroundColor": "#f59e0b",
+        "borderColor": "#d97706",
+        "borderWidth": 2,
+        "borderStyle": "solid",
+        "opacity": 1,
+        "textColor": "#ffffff"
+      },
+      "customData": {
+        "fov": 103,
+        "irDistance": 30
+      }
+    },
+    {
+      "id": "node_pb_cam_s05_b",
+      "diagramMode": "topology",
+      "floorId": "flr_pb_main",
+      "type": "device",
+      "assetId": "ast_pb_cam_s05_b",
+      "label": "Cam S05-B",
+      "x": 678,
+      "y": 286,
+      "width": 36,
+      "height": 32,
+      "rotation": 315,
+      "style": {
+        "backgroundColor": "#f59e0b",
+        "borderColor": "#d97706",
+        "borderWidth": 2,
+        "borderStyle": "solid",
+        "opacity": 1,
+        "textColor": "#ffffff"
+      },
+      "customData": {
+        "fov": 103,
+        "irDistance": 30
+      }
+    },
+    {
+      "id": "node_pb_cam_s06_a",
+      "diagramMode": "topology",
+      "floorId": "flr_pb_main",
+      "type": "device",
+      "assetId": "ast_pb_cam_s06_a",
+      "label": "Cam S06-A",
+      "x": 72,
+      "y": 402,
+      "width": 36,
+      "height": 32,
+      "rotation": 135,
+      "style": {
+        "backgroundColor": "#f59e0b",
+        "borderColor": "#d97706",
+        "borderWidth": 2,
+        "borderStyle": "solid",
+        "opacity": 1,
+        "textColor": "#ffffff"
+      },
+      "customData": {
+        "fov": 103,
+        "irDistance": 30
+      }
+    },
+    {
+      "id": "node_pb_cam_s06_b",
+      "diagramMode": "topology",
+      "floorId": "flr_pb_main",
+      "type": "device",
+      "assetId": "ast_pb_cam_s06_b",
+      "label": "Cam S06-B",
+      "x": 134,
+      "y": 618,
+      "width": 36,
+      "height": 32,
+      "rotation": 315,
+      "style": {
+        "backgroundColor": "#f59e0b",
+        "borderColor": "#d97706",
+        "borderWidth": 2,
+        "borderStyle": "solid",
+        "opacity": 1,
+        "textColor": "#ffffff"
+      },
+      "customData": {
+        "fov": 103,
+        "irDistance": 30
+      }
+    },
+    {
+      "id": "node_pb_cam_s07_a",
+      "diagramMode": "topology",
+      "floorId": "flr_pb_main",
+      "type": "device",
+      "assetId": "ast_pb_cam_s07_a",
+      "label": "Cam S07-A",
+      "x": 208,
+      "y": 402,
+      "width": 36,
+      "height": 32,
+      "rotation": 135,
+      "style": {
+        "backgroundColor": "#f59e0b",
+        "borderColor": "#d97706",
+        "borderWidth": 2,
+        "borderStyle": "solid",
+        "opacity": 1,
+        "textColor": "#ffffff"
+      },
+      "customData": {
+        "fov": 103,
+        "irDistance": 30
+      }
+    },
+    {
+      "id": "node_pb_cam_s07_b",
+      "diagramMode": "topology",
+      "floorId": "flr_pb_main",
+      "type": "device",
+      "assetId": "ast_pb_cam_s07_b",
+      "label": "Cam S07-B",
+      "x": 270,
+      "y": 618,
+      "width": 36,
+      "height": 32,
+      "rotation": 315,
+      "style": {
+        "backgroundColor": "#f59e0b",
+        "borderColor": "#d97706",
+        "borderWidth": 2,
+        "borderStyle": "solid",
+        "opacity": 1,
+        "textColor": "#ffffff"
+      },
+      "customData": {
+        "fov": 103,
+        "irDistance": 30
+      }
+    },
+    {
+      "id": "node_pb_cam_s08_a",
+      "diagramMode": "topology",
+      "floorId": "flr_pb_main",
+      "type": "device",
+      "assetId": "ast_pb_cam_s08_a",
+      "label": "Cam S08-A",
+      "x": 344,
+      "y": 402,
+      "width": 36,
+      "height": 32,
+      "rotation": 135,
+      "style": {
+        "backgroundColor": "#f59e0b",
+        "borderColor": "#d97706",
+        "borderWidth": 2,
+        "borderStyle": "solid",
+        "opacity": 1,
+        "textColor": "#ffffff"
+      },
+      "customData": {
+        "fov": 103,
+        "irDistance": 30
+      }
+    },
+    {
+      "id": "node_pb_cam_s08_b",
+      "diagramMode": "topology",
+      "floorId": "flr_pb_main",
+      "type": "device",
+      "assetId": "ast_pb_cam_s08_b",
+      "label": "Cam S08-B",
+      "x": 406,
+      "y": 618,
+      "width": 36,
+      "height": 32,
+      "rotation": 315,
+      "style": {
+        "backgroundColor": "#f59e0b",
+        "borderColor": "#d97706",
+        "borderWidth": 2,
+        "borderStyle": "solid",
+        "opacity": 1,
+        "textColor": "#ffffff"
+      },
+      "customData": {
+        "fov": 103,
+        "irDistance": 30
+      }
+    },
+    {
+      "id": "node_pb_cam_s09_a",
+      "diagramMode": "topology",
+      "floorId": "flr_pb_main",
+      "type": "device",
+      "assetId": "ast_pb_cam_s09_a",
+      "label": "Cam S09-A",
+      "x": 480,
+      "y": 402,
+      "width": 36,
+      "height": 32,
+      "rotation": 135,
+      "style": {
+        "backgroundColor": "#f59e0b",
+        "borderColor": "#d97706",
+        "borderWidth": 2,
+        "borderStyle": "solid",
+        "opacity": 1,
+        "textColor": "#ffffff"
+      },
+      "customData": {
+        "fov": 103,
+        "irDistance": 30
+      }
+    },
+    {
+      "id": "node_pb_cam_s09_b",
+      "diagramMode": "topology",
+      "floorId": "flr_pb_main",
+      "type": "device",
+      "assetId": "ast_pb_cam_s09_b",
+      "label": "Cam S09-B",
+      "x": 542,
+      "y": 618,
+      "width": 36,
+      "height": 32,
+      "rotation": 315,
+      "style": {
+        "backgroundColor": "#f59e0b",
+        "borderColor": "#d97706",
+        "borderWidth": 2,
+        "borderStyle": "solid",
+        "opacity": 1,
+        "textColor": "#ffffff"
+      },
+      "customData": {
+        "fov": 103,
+        "irDistance": 30
+      }
+    },
+    {
+      "id": "node_pb_cam_s10_a",
+      "diagramMode": "topology",
+      "floorId": "flr_pb_main",
+      "type": "device",
+      "assetId": "ast_pb_cam_s10_a",
+      "label": "Cam S10-A",
+      "x": 616,
+      "y": 402,
+      "width": 36,
+      "height": 32,
+      "rotation": 135,
+      "style": {
+        "backgroundColor": "#f59e0b",
+        "borderColor": "#d97706",
+        "borderWidth": 2,
+        "borderStyle": "solid",
+        "opacity": 1,
+        "textColor": "#ffffff"
+      },
+      "customData": {
+        "fov": 103,
+        "irDistance": 30
+      }
+    },
+    {
+      "id": "node_pb_cam_s10_b",
+      "diagramMode": "topology",
+      "floorId": "flr_pb_main",
+      "type": "device",
+      "assetId": "ast_pb_cam_s10_b",
+      "label": "Cam S10-B",
+      "x": 678,
+      "y": 618,
+      "width": 36,
+      "height": 32,
+      "rotation": 315,
+      "style": {
+        "backgroundColor": "#f59e0b",
+        "borderColor": "#d97706",
+        "borderWidth": 2,
+        "borderStyle": "solid",
+        "opacity": 1,
+        "textColor": "#ffffff"
+      },
+      "customData": {
+        "fov": 103,
+        "irDistance": 30
+      }
+    },
+    {
+      "id": "node_pb_cam_gate",
+      "diagramMode": "topology",
+      "floorId": "flr_pb_main",
+      "type": "device",
+      "assetId": "ast_pb_cam_gate",
+      "label": "Cam Cổng vào",
+      "x": 74,
+      "y": 744,
+      "width": 36,
+      "height": 32,
+      "rotation": 45,
+      "style": {
+        "backgroundColor": "#f59e0b",
+        "borderColor": "#d97706",
+        "borderWidth": 2,
+        "borderStyle": "solid",
+        "opacity": 1,
+        "textColor": "#ffffff"
+      },
+      "customData": {
+        "fov": 103,
+        "irDistance": 30
+      }
+    },
+    {
+      "id": "node_pb_cam_park",
+      "diagramMode": "topology",
+      "floorId": "flr_pb_main",
+      "type": "device",
+      "assetId": "ast_pb_cam_park",
+      "label": "Cam Bãi đỗ xe",
+      "x": 225,
+      "y": 702,
+      "width": 36,
+      "height": 32,
+      "rotation": 90,
+      "style": {
+        "backgroundColor": "#f59e0b",
+        "borderColor": "#d97706",
+        "borderWidth": 2,
+        "borderStyle": "solid",
+        "opacity": 1,
+        "textColor": "#ffffff"
+      },
+      "customData": {
+        "fov": 103,
+        "irDistance": 30
+      }
+    },
+    {
+      "id": "node_pb_cam_ctrl_in",
+      "diagramMode": "topology",
+      "floorId": "flr_pb_main",
+      "type": "device",
+      "assetId": "ast_pb_cam_ctrl_in",
+      "label": "Cam trong phòng",
+      "x": 832,
+      "y": 250,
+      "width": 36,
+      "height": 32,
+      "rotation": 225,
+      "style": {
+        "backgroundColor": "#f59e0b",
+        "borderColor": "#d97706",
+        "borderWidth": 2,
+        "borderStyle": "solid",
+        "opacity": 1,
+        "textColor": "#ffffff"
+      },
+      "customData": {
+        "fov": 103,
+        "irDistance": 30
+      }
+    },
+    {
+      "id": "node_pb_cam_ctrl_out",
+      "diagramMode": "topology",
+      "floorId": "flr_pb_main",
+      "type": "device",
+      "assetId": "ast_pb_cam_ctrl_out",
+      "label": "Cam ngoài phòng",
+      "x": 902,
+      "y": 84,
+      "width": 36,
+      "height": 32,
+      "rotation": 135,
+      "style": {
+        "backgroundColor": "#f59e0b",
+        "borderColor": "#d97706",
+        "borderWidth": 2,
+        "borderStyle": "solid",
+        "opacity": 1,
+        "textColor": "#ffffff"
+      },
+      "customData": {
+        "fov": 103,
+        "irDistance": 30
+      }
+    }
   ],
   "cables": [
     {
-      "id": "cab_pb_sw_nvr",
-      "cableCode": "LAN-SW-NVR",
+      "id": "cab_pb_01",
+      "cableCode": "RED-CAM-S01A",
       "diagramMode": "topology",
-      "sourceNodeId": "node_pb_sw",
-      "sourcePortId": "port_5",
-      "targetNodeId": "node_pb_nvr",
-      "targetPortId": "port_1",
-      "cableType": "CAT6_UTP",
-      "bandwidth": "1G",
-      "color": "#ef4444",
-      "routingType": "orthogonal",
-      "lineStyle": "solid",
-      "strokeWidth": 2.5,
-      "lengthMeters": 3,
-      "vlan": "40",
-      "status": "active"
-    },
-    {
-      "id": "cab_pb_nvr_mon_small",
-      "cableCode": "HDMI-NVR-MON-S",
-      "diagramMode": "topology",
-      "sourceNodeId": "node_pb_nvr",
-      "sourcePortId": "port_3",
-      "targetNodeId": "node_pb_mon_small",
-      "targetPortId": "port_1",
-      "cableType": "HDMI",
-      "bandwidth": "1080p",
-      "color": "#2563eb",
-      "routingType": "orthogonal",
-      "lineStyle": "solid",
-      "strokeWidth": 2.5,
-      "lengthMeters": 5,
-      "status": "active"
-    },
-    {
-      "id": "cab_pb_pc_mon_large",
-      "cableCode": "OVERHEAD-PC-TV-L",
-      "diagramMode": "topology",
-      "sourceNodeId": "node_pb_pc",
-      "sourcePortId": "port_2",
-      "targetNodeId": "node_pb_mon_large",
-      "targetPortId": "port_1",
-      "cableType": "HDMI",
-      "bandwidth": "4K",
-      "color": "#2563eb",
-      "routingType": "orthogonal",
-      "lineStyle": "solid",
-      "strokeWidth": 2.5,
-      "lengthMeters": 18,
-      "status": "active"
-    },
-    {
-      "id": "cab_pb_gate_sw",
-      "cableCode": "OVERHEAD-CAM-GATE",
-      "diagramMode": "topology",
-      "sourceNodeId": "node_pb_cam_gate",
+      "sourceNodeId": "node_pb_cam_s01_a",
       "sourcePortId": "port_1",
       "targetNodeId": "node_pb_sw",
       "targetPortId": "port_1",
@@ -326,16 +2499,16 @@
       "color": "#ef4444",
       "routingType": "orthogonal",
       "lineStyle": "solid",
-      "strokeWidth": 2.5,
-      "lengthMeters": 85,
+      "strokeWidth": 2,
+      "lengthMeters": 73,
       "vlan": "40",
       "status": "active"
     },
     {
-      "id": "cab_pb_park_sw",
-      "cableCode": "OVERHEAD-CAM-PARK",
+      "id": "cab_pb_02",
+      "cableCode": "RED-CAM-S01B",
       "diagramMode": "topology",
-      "sourceNodeId": "node_pb_cam_park",
+      "sourceNodeId": "node_pb_cam_s01_b",
       "sourcePortId": "port_1",
       "targetNodeId": "node_pb_sw",
       "targetPortId": "port_2",
@@ -344,9 +2517,475 @@
       "color": "#ef4444",
       "routingType": "orthogonal",
       "lineStyle": "solid",
-      "strokeWidth": 2.5,
-      "lengthMeters": 70,
+      "strokeWidth": 2,
+      "lengthMeters": 76,
       "vlan": "40",
+      "status": "active"
+    },
+    {
+      "id": "cab_pb_03",
+      "cableCode": "RED-CAM-S02A",
+      "diagramMode": "topology",
+      "sourceNodeId": "node_pb_cam_s02_a",
+      "sourcePortId": "port_1",
+      "targetNodeId": "node_pb_sw",
+      "targetPortId": "port_3",
+      "cableType": "CAT6_UTP",
+      "bandwidth": "1G",
+      "color": "#ef4444",
+      "routingType": "orthogonal",
+      "lineStyle": "solid",
+      "strokeWidth": 2,
+      "lengthMeters": 65,
+      "vlan": "40",
+      "status": "active"
+    },
+    {
+      "id": "cab_pb_04",
+      "cableCode": "RED-CAM-S02B",
+      "diagramMode": "topology",
+      "sourceNodeId": "node_pb_cam_s02_b",
+      "sourcePortId": "port_1",
+      "targetNodeId": "node_pb_sw",
+      "targetPortId": "port_4",
+      "cableType": "CAT6_UTP",
+      "bandwidth": "1G",
+      "color": "#ef4444",
+      "routingType": "orthogonal",
+      "lineStyle": "solid",
+      "strokeWidth": 2,
+      "lengthMeters": 68,
+      "vlan": "40",
+      "status": "active"
+    },
+    {
+      "id": "cab_pb_05",
+      "cableCode": "RED-CAM-S03A",
+      "diagramMode": "topology",
+      "sourceNodeId": "node_pb_cam_s03_a",
+      "sourcePortId": "port_1",
+      "targetNodeId": "node_pb_sw",
+      "targetPortId": "port_5",
+      "cableType": "CAT6_UTP",
+      "bandwidth": "1G",
+      "color": "#ef4444",
+      "routingType": "orthogonal",
+      "lineStyle": "solid",
+      "strokeWidth": 2,
+      "lengthMeters": 57,
+      "vlan": "40",
+      "status": "active"
+    },
+    {
+      "id": "cab_pb_06",
+      "cableCode": "RED-CAM-S03B",
+      "diagramMode": "topology",
+      "sourceNodeId": "node_pb_cam_s03_b",
+      "sourcePortId": "port_1",
+      "targetNodeId": "node_pb_sw",
+      "targetPortId": "port_6",
+      "cableType": "CAT6_UTP",
+      "bandwidth": "1G",
+      "color": "#ef4444",
+      "routingType": "orthogonal",
+      "lineStyle": "solid",
+      "strokeWidth": 2,
+      "lengthMeters": 60,
+      "vlan": "40",
+      "status": "active"
+    },
+    {
+      "id": "cab_pb_07",
+      "cableCode": "RED-CAM-S04A",
+      "diagramMode": "topology",
+      "sourceNodeId": "node_pb_cam_s04_a",
+      "sourcePortId": "port_1",
+      "targetNodeId": "node_pb_sw",
+      "targetPortId": "port_7",
+      "cableType": "CAT6_UTP",
+      "bandwidth": "1G",
+      "color": "#ef4444",
+      "routingType": "orthogonal",
+      "lineStyle": "solid",
+      "strokeWidth": 2,
+      "lengthMeters": 49,
+      "vlan": "40",
+      "status": "active"
+    },
+    {
+      "id": "cab_pb_08",
+      "cableCode": "RED-CAM-S04B",
+      "diagramMode": "topology",
+      "sourceNodeId": "node_pb_cam_s04_b",
+      "sourcePortId": "port_1",
+      "targetNodeId": "node_pb_sw",
+      "targetPortId": "port_8",
+      "cableType": "CAT6_UTP",
+      "bandwidth": "1G",
+      "color": "#ef4444",
+      "routingType": "orthogonal",
+      "lineStyle": "solid",
+      "strokeWidth": 2,
+      "lengthMeters": 52,
+      "vlan": "40",
+      "status": "active"
+    },
+    {
+      "id": "cab_pb_09",
+      "cableCode": "RED-CAM-S05A",
+      "diagramMode": "topology",
+      "sourceNodeId": "node_pb_cam_s05_a",
+      "sourcePortId": "port_1",
+      "targetNodeId": "node_pb_sw",
+      "targetPortId": "port_9",
+      "cableType": "CAT6_UTP",
+      "bandwidth": "1G",
+      "color": "#ef4444",
+      "routingType": "orthogonal",
+      "lineStyle": "solid",
+      "strokeWidth": 2,
+      "lengthMeters": 41,
+      "vlan": "40",
+      "status": "active"
+    },
+    {
+      "id": "cab_pb_10",
+      "cableCode": "RED-CAM-S05B",
+      "diagramMode": "topology",
+      "sourceNodeId": "node_pb_cam_s05_b",
+      "sourcePortId": "port_1",
+      "targetNodeId": "node_pb_sw",
+      "targetPortId": "port_10",
+      "cableType": "CAT6_UTP",
+      "bandwidth": "1G",
+      "color": "#ef4444",
+      "routingType": "orthogonal",
+      "lineStyle": "solid",
+      "strokeWidth": 2,
+      "lengthMeters": 44,
+      "vlan": "40",
+      "status": "active"
+    },
+    {
+      "id": "cab_pb_11",
+      "cableCode": "RED-CAM-S06A",
+      "diagramMode": "topology",
+      "sourceNodeId": "node_pb_cam_s06_a",
+      "sourcePortId": "port_1",
+      "targetNodeId": "node_pb_sw",
+      "targetPortId": "port_11",
+      "cableType": "CAT6_UTP",
+      "bandwidth": "1G",
+      "color": "#ef4444",
+      "routingType": "orthogonal",
+      "lineStyle": "solid",
+      "strokeWidth": 2,
+      "lengthMeters": 73,
+      "vlan": "40",
+      "status": "active"
+    },
+    {
+      "id": "cab_pb_12",
+      "cableCode": "RED-CAM-S06B",
+      "diagramMode": "topology",
+      "sourceNodeId": "node_pb_cam_s06_b",
+      "sourcePortId": "port_1",
+      "targetNodeId": "node_pb_sw",
+      "targetPortId": "port_12",
+      "cableType": "CAT6_UTP",
+      "bandwidth": "1G",
+      "color": "#ef4444",
+      "routingType": "orthogonal",
+      "lineStyle": "solid",
+      "strokeWidth": 2,
+      "lengthMeters": 76,
+      "vlan": "40",
+      "status": "active"
+    },
+    {
+      "id": "cab_pb_13",
+      "cableCode": "RED-CAM-S07A",
+      "diagramMode": "topology",
+      "sourceNodeId": "node_pb_cam_s07_a",
+      "sourcePortId": "port_1",
+      "targetNodeId": "node_pb_sw",
+      "targetPortId": "port_13",
+      "cableType": "CAT6_UTP",
+      "bandwidth": "1G",
+      "color": "#ef4444",
+      "routingType": "orthogonal",
+      "lineStyle": "solid",
+      "strokeWidth": 2,
+      "lengthMeters": 65,
+      "vlan": "40",
+      "status": "active"
+    },
+    {
+      "id": "cab_pb_14",
+      "cableCode": "RED-CAM-S07B",
+      "diagramMode": "topology",
+      "sourceNodeId": "node_pb_cam_s07_b",
+      "sourcePortId": "port_1",
+      "targetNodeId": "node_pb_sw",
+      "targetPortId": "port_14",
+      "cableType": "CAT6_UTP",
+      "bandwidth": "1G",
+      "color": "#ef4444",
+      "routingType": "orthogonal",
+      "lineStyle": "solid",
+      "strokeWidth": 2,
+      "lengthMeters": 68,
+      "vlan": "40",
+      "status": "active"
+    },
+    {
+      "id": "cab_pb_15",
+      "cableCode": "RED-CAM-S08A",
+      "diagramMode": "topology",
+      "sourceNodeId": "node_pb_cam_s08_a",
+      "sourcePortId": "port_1",
+      "targetNodeId": "node_pb_sw",
+      "targetPortId": "port_15",
+      "cableType": "CAT6_UTP",
+      "bandwidth": "1G",
+      "color": "#ef4444",
+      "routingType": "orthogonal",
+      "lineStyle": "solid",
+      "strokeWidth": 2,
+      "lengthMeters": 57,
+      "vlan": "40",
+      "status": "active"
+    },
+    {
+      "id": "cab_pb_16",
+      "cableCode": "RED-CAM-S08B",
+      "diagramMode": "topology",
+      "sourceNodeId": "node_pb_cam_s08_b",
+      "sourcePortId": "port_1",
+      "targetNodeId": "node_pb_sw",
+      "targetPortId": "port_16",
+      "cableType": "CAT6_UTP",
+      "bandwidth": "1G",
+      "color": "#ef4444",
+      "routingType": "orthogonal",
+      "lineStyle": "solid",
+      "strokeWidth": 2,
+      "lengthMeters": 60,
+      "vlan": "40",
+      "status": "active"
+    },
+    {
+      "id": "cab_pb_17",
+      "cableCode": "RED-CAM-S09A",
+      "diagramMode": "topology",
+      "sourceNodeId": "node_pb_cam_s09_a",
+      "sourcePortId": "port_1",
+      "targetNodeId": "node_pb_sw",
+      "targetPortId": "port_17",
+      "cableType": "CAT6_UTP",
+      "bandwidth": "1G",
+      "color": "#ef4444",
+      "routingType": "orthogonal",
+      "lineStyle": "solid",
+      "strokeWidth": 2,
+      "lengthMeters": 49,
+      "vlan": "40",
+      "status": "active"
+    },
+    {
+      "id": "cab_pb_18",
+      "cableCode": "RED-CAM-S09B",
+      "diagramMode": "topology",
+      "sourceNodeId": "node_pb_cam_s09_b",
+      "sourcePortId": "port_1",
+      "targetNodeId": "node_pb_sw",
+      "targetPortId": "port_18",
+      "cableType": "CAT6_UTP",
+      "bandwidth": "1G",
+      "color": "#ef4444",
+      "routingType": "orthogonal",
+      "lineStyle": "solid",
+      "strokeWidth": 2,
+      "lengthMeters": 52,
+      "vlan": "40",
+      "status": "active"
+    },
+    {
+      "id": "cab_pb_19",
+      "cableCode": "RED-CAM-S10A",
+      "diagramMode": "topology",
+      "sourceNodeId": "node_pb_cam_s10_a",
+      "sourcePortId": "port_1",
+      "targetNodeId": "node_pb_sw",
+      "targetPortId": "port_19",
+      "cableType": "CAT6_UTP",
+      "bandwidth": "1G",
+      "color": "#ef4444",
+      "routingType": "orthogonal",
+      "lineStyle": "solid",
+      "strokeWidth": 2,
+      "lengthMeters": 41,
+      "vlan": "40",
+      "status": "active"
+    },
+    {
+      "id": "cab_pb_20",
+      "cableCode": "RED-CAM-S10B",
+      "diagramMode": "topology",
+      "sourceNodeId": "node_pb_cam_s10_b",
+      "sourcePortId": "port_1",
+      "targetNodeId": "node_pb_sw",
+      "targetPortId": "port_20",
+      "cableType": "CAT6_UTP",
+      "bandwidth": "1G",
+      "color": "#ef4444",
+      "routingType": "orthogonal",
+      "lineStyle": "solid",
+      "strokeWidth": 2,
+      "lengthMeters": 44,
+      "vlan": "40",
+      "status": "active"
+    },
+    {
+      "id": "cab_pb_21",
+      "cableCode": "RED-CAM-GATE",
+      "diagramMode": "topology",
+      "sourceNodeId": "node_pb_cam_gate",
+      "sourcePortId": "port_1",
+      "targetNodeId": "node_pb_sw",
+      "targetPortId": "port_21",
+      "cableType": "CAT6_UTP",
+      "bandwidth": "1G",
+      "color": "#ef4444",
+      "routingType": "orthogonal",
+      "lineStyle": "solid",
+      "strokeWidth": 2,
+      "lengthMeters": 85,
+      "vlan": "40",
+      "status": "active"
+    },
+    {
+      "id": "cab_pb_22",
+      "cableCode": "RED-CAM-PARK",
+      "diagramMode": "topology",
+      "sourceNodeId": "node_pb_cam_park",
+      "sourcePortId": "port_1",
+      "targetNodeId": "node_pb_sw",
+      "targetPortId": "port_22",
+      "cableType": "CAT6_UTP",
+      "bandwidth": "1G",
+      "color": "#ef4444",
+      "routingType": "orthogonal",
+      "lineStyle": "solid",
+      "strokeWidth": 2,
+      "lengthMeters": 72,
+      "vlan": "40",
+      "status": "active"
+    },
+    {
+      "id": "cab_pb_23",
+      "cableCode": "RED-CAM-CTRL-IN",
+      "diagramMode": "topology",
+      "sourceNodeId": "node_pb_cam_ctrl_in",
+      "sourcePortId": "port_1",
+      "targetNodeId": "node_pb_sw",
+      "targetPortId": "port_23",
+      "cableType": "CAT6_UTP",
+      "bandwidth": "1G",
+      "color": "#ef4444",
+      "routingType": "orthogonal",
+      "lineStyle": "solid",
+      "strokeWidth": 2,
+      "lengthMeters": 6,
+      "vlan": "40",
+      "status": "active"
+    },
+    {
+      "id": "cab_pb_24",
+      "cableCode": "RED-CAM-CTRL-OUT",
+      "diagramMode": "topology",
+      "sourceNodeId": "node_pb_cam_ctrl_out",
+      "sourcePortId": "port_1",
+      "targetNodeId": "node_pb_sw",
+      "targetPortId": "port_24",
+      "cableType": "CAT6_UTP",
+      "bandwidth": "1G",
+      "color": "#ef4444",
+      "routingType": "orthogonal",
+      "lineStyle": "solid",
+      "strokeWidth": 2,
+      "lengthMeters": 12,
+      "vlan": "40",
+      "status": "active"
+    },
+    {
+      "id": "cab_pb_sw_nvr",
+      "cableCode": "RED-SW-NVR",
+      "diagramMode": "topology",
+      "sourceNodeId": "node_pb_sw",
+      "sourcePortId": "port_25",
+      "targetNodeId": "node_pb_nvr",
+      "targetPortId": "port_1",
+      "cableType": "CAT6_UTP",
+      "bandwidth": "1G",
+      "color": "#ef4444",
+      "routingType": "orthogonal",
+      "lineStyle": "solid",
+      "strokeWidth": 2.5,
+      "lengthMeters": 2,
+      "vlan": "40",
+      "status": "active"
+    },
+    {
+      "id": "cab_pb_sw_pc",
+      "cableCode": "BLUE-DATA-SW-PC",
+      "diagramMode": "topology",
+      "sourceNodeId": "node_pb_sw",
+      "sourcePortId": "port_26",
+      "targetNodeId": "node_pb_pc",
+      "targetPortId": "port_1",
+      "cableType": "CAT6_UTP",
+      "bandwidth": "1G",
+      "color": "#2563eb",
+      "routingType": "orthogonal",
+      "lineStyle": "solid",
+      "strokeWidth": 2.5,
+      "lengthMeters": 3,
+      "vlan": "40",
+      "status": "active"
+    },
+    {
+      "id": "cab_pb_nvr_mons",
+      "cableCode": "BLUE-MON-SMALL",
+      "diagramMode": "topology",
+      "sourceNodeId": "node_pb_nvr",
+      "sourcePortId": "port_2",
+      "targetNodeId": "node_pb_mon_small",
+      "targetPortId": "port_1",
+      "cableType": "CAT6_UTP",
+      "bandwidth": "1G",
+      "color": "#2563eb",
+      "routingType": "orthogonal",
+      "lineStyle": "solid",
+      "strokeWidth": 2.5,
+      "lengthMeters": 5,
+      "status": "active"
+    },
+    {
+      "id": "cab_pb_pc_monl",
+      "cableCode": "BLUE-MON-LARGE",
+      "diagramMode": "topology",
+      "sourceNodeId": "node_pb_pc",
+      "sourcePortId": "port_3",
+      "targetNodeId": "node_pb_mon_large",
+      "targetPortId": "port_1",
+      "cableType": "CAT6_UTP",
+      "bandwidth": "1G",
+      "color": "#2563eb",
+      "routingType": "orthogonal",
+      "lineStyle": "solid",
+      "strokeWidth": 2.5,
+      "lengthMeters": 15,
       "status": "active"
     }
   ],
@@ -355,20 +2994,20 @@
       "id": "vlan_40",
       "vlanId": 40,
       "name": "CCTV-Pickleball",
-      "purpose": "Camera sân thi đấu, cổng/bãi xe, phòng điều khiển & NVR",
+      "purpose": "20 Camera 10 sân, 2 Camera cổng/bãi xe, 2 Camera phòng điều khiển, NVR & PC",
       "color": "#ef4444"
     }
   ],
   "subnets": [
     {
       "id": "sub_pb_cctv",
-      "name": "CCTV & Điều khiển Pickleball",
+      "name": "CCTV & Điều khiển Sân Pickleball",
       "cidr": "192.168.40.0/24",
       "vlanId": 40,
       "gateway": "192.168.40.1",
       "dnsServers": "8.8.8.8, 1.1.1.1",
       "dhcpRange": "Tĩnh (Static)",
-      "notes": "Camera 10 sân, cổng/bãi xe, phòng điều khiển, NVR và PC"
+      "notes": "24 Camera IP PoE + Switch PoE + NVR 32CH + PC Điều khiển"
     }
   ],
   "patchLinks": [],
@@ -380,13 +3019,17 @@
     "snapToGrid": true,
     "showRulers": true,
     "showGrid": true,
-    "showPortLabels": true,
+    "showPortLabels": false,
     "showIpAddresses": true,
-    "showCableCodes": true,
+    "showCableCodes": false,
     "showCoverageRadius": false,
     "unit": "m",
-    "scale": 25,
+    "scale": 20,
     "backgroundColor": "#f8fafc",
-    "isDarkMode": false
+    "isDarkMode": false,
+    "ipRangeStart": "192.168.40.10",
+    "ipRangeEnd": "192.168.40.250",
+    "ipSubnetMask": "255.255.255.0",
+    "ipGateway": "192.168.40.1"
   }
 }
