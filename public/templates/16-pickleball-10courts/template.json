@@ -1,18 +1,18 @@
 {
   "id": "pickleball-10c-001",
   "legacyId": "tpl_pickleball_10courts",
-  "name": "Khu Sân Pickleball 10 Sân (24 Camera + Phòng Điều Khiển)",
+  "name": "Khu Sân Pickleball 10 Sân (Phòng Điều Khiển Trong Sân)",
   "category": "CCTV & Mạng",
   "mode": "topology",
   "badge": "Sample Project",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "updatedAt": "2026-11-20",
   "author": "HACHIHI",
-  "description": "Sơ đồ hạ tầng hoàn chỉnh cho khu 10 sân Pickleball (2 dãy x 5 sân, 6,10m x 13,41m/sân), 20 camera sân, 2 camera cổng/bãi đỗ xe, phòng điều khiển (PC, NVR, Switch PoE, cam trong/ngoài phòng, màn hình nhỏ/lớn) và hệ thống cáp treo trên cao.",
+  "description": "Sơ đồ hạ tầng hoàn chỉnh cho khu 10 sân Pickleball (6,10m x 13,41m/sân), Phòng Điều Khiển nằm phía trong khu sân, 24 camera PoE, PC, NVR, Switch PoE, màn hình nhỏ/lớn và cáp treo trên cao.",
   "highlights": [
-    "10 sân (2 dãy x 5 sân)",
-    "24 Camera IP PoE",
-    "Phòng điều khiển & 2 màn hình"
+    "10 sân Pickleball",
+    "Phòng điều khiển trong sân",
+    "24 Camera PoE & cáp treo"
   ],
   "projectFile": "project.json",
   "preview": "preview.svg",

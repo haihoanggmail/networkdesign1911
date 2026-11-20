@@ -6,263 +6,264 @@
   <pattern id="gridPat" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="#1e293b" stroke-width="0.6"/></pattern>
 </defs>
 <rect width="1060" height="910" fill="#0b1120"/>
-<rect x="44" y="54" width="988" height="822" fill="#14532d" fill-opacity="0.35" stroke="#334155" stroke-width="2" rx="8"/>
-<rect x="44" y="54" width="988" height="822" fill="url(#gridPat)" opacity="0.45"/>
-<text x="530" y="34" fill="#f8fafc" font-size="18" font-weight="bold" text-anchor="middle">SƠ ĐỒ HẠ TẦNG MẠNG &amp; CAMERA KHU SÂN PICKLEBALL 10 SÂN (6,10m × 13,41m)</text>
+<rect x="52" y="54" width="988" height="822" fill="#14532d" fill-opacity="0.35" stroke="#334155" stroke-width="2" rx="8"/>
+<rect x="52" y="54" width="988" height="822" fill="url(#gridPat)" opacity="0.45"/>
+<text x="546" y="34" fill="#f8fafc" font-size="18" font-weight="bold" text-anchor="middle">SƠ ĐỒ HẠ TẦNG MẠNG &amp; CAMERA KHU SÂN PICKLEBALL 10 SÂN (6,10m × 13,41m)</text>
 <g id="court_01">
-  <rect x="70" y="75" width="122" height="268" fill="url(#courtBlueA)" stroke="#f8fafc" stroke-width="2.5" rx="2"/>
-  <rect x="76" y="171.5" width="110" height="75.0" fill="url(#kitchenOrange)" stroke="#ffffff" stroke-width="1.5"/>
-  <line x1="66" y1="209.0" x2="196" y2="209.0" stroke="#ffffff" stroke-width="2.2" stroke-dasharray="5,2"/>
-  <line x1="131.0" y1="81" x2="131.0" y2="171.5" stroke="#ffffff" stroke-width="1.3" opacity="0.85"/>
-  <line x1="131.0" y1="246.5" x2="131.0" y2="337" stroke="#ffffff" stroke-width="1.3" opacity="0.85"/>
-  <text x="131.0" y="119" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle">SÂN 01</text>
-  <text x="131.0" y="327" fill="#e2e8f0" font-size="9" text-anchor="middle">6,10×13,41m</text>
+  <rect x="80" y="75" width="122" height="268" fill="url(#courtBlueA)" stroke="#f8fafc" stroke-width="2.5" rx="2"/>
+  <rect x="86" y="171.5" width="110" height="75.0" fill="url(#kitchenOrange)" stroke="#ffffff" stroke-width="1.5"/>
+  <line x1="76" y1="209.0" x2="206" y2="209.0" stroke="#ffffff" stroke-width="2.2" stroke-dasharray="5,2"/>
+  <line x1="141.0" y1="81" x2="141.0" y2="171.5" stroke="#ffffff" stroke-width="1.3" opacity="0.85"/>
+  <line x1="141.0" y1="246.5" x2="141.0" y2="337" stroke="#ffffff" stroke-width="1.3" opacity="0.85"/>
+  <text x="141.0" y="119" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle">SÂN 01</text>
+  <text x="141.0" y="327" fill="#e2e8f0" font-size="9" text-anchor="middle">6,10×13,41m</text>
 </g>
 <g id="court_02">
-  <rect x="208" y="75" width="122" height="268" fill="url(#courtBlueB)" stroke="#f8fafc" stroke-width="2.5" rx="2"/>
-  <rect x="214" y="171.5" width="110" height="75.0" fill="url(#kitchenOrange)" stroke="#ffffff" stroke-width="1.5"/>
-  <line x1="204" y1="209.0" x2="334" y2="209.0" stroke="#ffffff" stroke-width="2.2" stroke-dasharray="5,2"/>
-  <line x1="269.0" y1="81" x2="269.0" y2="171.5" stroke="#ffffff" stroke-width="1.3" opacity="0.85"/>
-  <line x1="269.0" y1="246.5" x2="269.0" y2="337" stroke="#ffffff" stroke-width="1.3" opacity="0.85"/>
-  <text x="269.0" y="119" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle">SÂN 02</text>
-  <text x="269.0" y="327" fill="#e2e8f0" font-size="9" text-anchor="middle">6,10×13,41m</text>
+  <rect x="218" y="75" width="122" height="268" fill="url(#courtBlueB)" stroke="#f8fafc" stroke-width="2.5" rx="2"/>
+  <rect x="224" y="171.5" width="110" height="75.0" fill="url(#kitchenOrange)" stroke="#ffffff" stroke-width="1.5"/>
+  <line x1="214" y1="209.0" x2="344" y2="209.0" stroke="#ffffff" stroke-width="2.2" stroke-dasharray="5,2"/>
+  <line x1="279.0" y1="81" x2="279.0" y2="171.5" stroke="#ffffff" stroke-width="1.3" opacity="0.85"/>
+  <line x1="279.0" y1="246.5" x2="279.0" y2="337" stroke="#ffffff" stroke-width="1.3" opacity="0.85"/>
+  <text x="279.0" y="119" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle">SÂN 02</text>
+  <text x="279.0" y="327" fill="#e2e8f0" font-size="9" text-anchor="middle">6,10×13,41m</text>
 </g>
 <g id="court_03">
-  <rect x="346" y="75" width="122" height="268" fill="url(#courtBlueA)" stroke="#f8fafc" stroke-width="2.5" rx="2"/>
-  <rect x="352" y="171.5" width="110" height="75.0" fill="url(#kitchenOrange)" stroke="#ffffff" stroke-width="1.5"/>
-  <line x1="342" y1="209.0" x2="472" y2="209.0" stroke="#ffffff" stroke-width="2.2" stroke-dasharray="5,2"/>
-  <line x1="407.0" y1="81" x2="407.0" y2="171.5" stroke="#ffffff" stroke-width="1.3" opacity="0.85"/>
-  <line x1="407.0" y1="246.5" x2="407.0" y2="337" stroke="#ffffff" stroke-width="1.3" opacity="0.85"/>
-  <text x="407.0" y="119" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle">SÂN 03</text>
-  <text x="407.0" y="327" fill="#e2e8f0" font-size="9" text-anchor="middle">6,10×13,41m</text>
+  <rect x="356" y="75" width="122" height="268" fill="url(#courtBlueA)" stroke="#f8fafc" stroke-width="2.5" rx="2"/>
+  <rect x="362" y="171.5" width="110" height="75.0" fill="url(#kitchenOrange)" stroke="#ffffff" stroke-width="1.5"/>
+  <line x1="352" y1="209.0" x2="482" y2="209.0" stroke="#ffffff" stroke-width="2.2" stroke-dasharray="5,2"/>
+  <line x1="417.0" y1="81" x2="417.0" y2="171.5" stroke="#ffffff" stroke-width="1.3" opacity="0.85"/>
+  <line x1="417.0" y1="246.5" x2="417.0" y2="337" stroke="#ffffff" stroke-width="1.3" opacity="0.85"/>
+  <text x="417.0" y="119" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle">SÂN 03</text>
+  <text x="417.0" y="327" fill="#e2e8f0" font-size="9" text-anchor="middle">6,10×13,41m</text>
 </g>
 <g id="court_04">
-  <rect x="484" y="75" width="122" height="268" fill="url(#courtBlueB)" stroke="#f8fafc" stroke-width="2.5" rx="2"/>
-  <rect x="490" y="171.5" width="110" height="75.0" fill="url(#kitchenOrange)" stroke="#ffffff" stroke-width="1.5"/>
-  <line x1="480" y1="209.0" x2="610" y2="209.0" stroke="#ffffff" stroke-width="2.2" stroke-dasharray="5,2"/>
-  <line x1="545.0" y1="81" x2="545.0" y2="171.5" stroke="#ffffff" stroke-width="1.3" opacity="0.85"/>
-  <line x1="545.0" y1="246.5" x2="545.0" y2="337" stroke="#ffffff" stroke-width="1.3" opacity="0.85"/>
-  <text x="545.0" y="119" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle">SÂN 04</text>
-  <text x="545.0" y="327" fill="#e2e8f0" font-size="9" text-anchor="middle">6,10×13,41m</text>
+  <rect x="494" y="75" width="122" height="268" fill="url(#courtBlueB)" stroke="#f8fafc" stroke-width="2.5" rx="2"/>
+  <rect x="500" y="171.5" width="110" height="75.0" fill="url(#kitchenOrange)" stroke="#ffffff" stroke-width="1.5"/>
+  <line x1="490" y1="209.0" x2="620" y2="209.0" stroke="#ffffff" stroke-width="2.2" stroke-dasharray="5,2"/>
+  <line x1="555.0" y1="81" x2="555.0" y2="171.5" stroke="#ffffff" stroke-width="1.3" opacity="0.85"/>
+  <line x1="555.0" y1="246.5" x2="555.0" y2="337" stroke="#ffffff" stroke-width="1.3" opacity="0.85"/>
+  <text x="555.0" y="119" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle">SÂN 04</text>
+  <text x="555.0" y="327" fill="#e2e8f0" font-size="9" text-anchor="middle">6,10×13,41m</text>
 </g>
 <g id="court_05">
-  <rect x="622" y="75" width="122" height="268" fill="url(#courtBlueA)" stroke="#f8fafc" stroke-width="2.5" rx="2"/>
-  <rect x="628" y="171.5" width="110" height="75.0" fill="url(#kitchenOrange)" stroke="#ffffff" stroke-width="1.5"/>
-  <line x1="618" y1="209.0" x2="748" y2="209.0" stroke="#ffffff" stroke-width="2.2" stroke-dasharray="5,2"/>
-  <line x1="683.0" y1="81" x2="683.0" y2="171.5" stroke="#ffffff" stroke-width="1.3" opacity="0.85"/>
-  <line x1="683.0" y1="246.5" x2="683.0" y2="337" stroke="#ffffff" stroke-width="1.3" opacity="0.85"/>
-  <text x="683.0" y="119" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle">SÂN 05</text>
-  <text x="683.0" y="327" fill="#e2e8f0" font-size="9" text-anchor="middle">6,10×13,41m</text>
+  <rect x="632" y="75" width="122" height="268" fill="url(#courtBlueA)" stroke="#f8fafc" stroke-width="2.5" rx="2"/>
+  <rect x="638" y="171.5" width="110" height="75.0" fill="url(#kitchenOrange)" stroke="#ffffff" stroke-width="1.5"/>
+  <line x1="628" y1="209.0" x2="758" y2="209.0" stroke="#ffffff" stroke-width="2.2" stroke-dasharray="5,2"/>
+  <line x1="693.0" y1="81" x2="693.0" y2="171.5" stroke="#ffffff" stroke-width="1.3" opacity="0.85"/>
+  <line x1="693.0" y1="246.5" x2="693.0" y2="337" stroke="#ffffff" stroke-width="1.3" opacity="0.85"/>
+  <text x="693.0" y="119" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle">SÂN 05</text>
+  <text x="693.0" y="327" fill="#e2e8f0" font-size="9" text-anchor="middle">6,10×13,41m</text>
 </g>
 <g id="court_06">
-  <rect x="70" y="411" width="122" height="268" fill="url(#courtBlueB)" stroke="#f8fafc" stroke-width="2.5" rx="2"/>
-  <rect x="76" y="507.5" width="110" height="75.0" fill="url(#kitchenOrange)" stroke="#ffffff" stroke-width="1.5"/>
-  <line x1="66" y1="545.0" x2="196" y2="545.0" stroke="#ffffff" stroke-width="2.2" stroke-dasharray="5,2"/>
-  <line x1="131.0" y1="417" x2="131.0" y2="507.5" stroke="#ffffff" stroke-width="1.3" opacity="0.85"/>
-  <line x1="131.0" y1="582.5" x2="131.0" y2="673" stroke="#ffffff" stroke-width="1.3" opacity="0.85"/>
-  <text x="131.0" y="455" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle">SÂN 06</text>
-  <text x="131.0" y="663" fill="#e2e8f0" font-size="9" text-anchor="middle">6,10×13,41m</text>
+  <rect x="218" y="411" width="122" height="268" fill="url(#courtBlueB)" stroke="#f8fafc" stroke-width="2.5" rx="2"/>
+  <rect x="224" y="507.5" width="110" height="75.0" fill="url(#kitchenOrange)" stroke="#ffffff" stroke-width="1.5"/>
+  <line x1="214" y1="545.0" x2="344" y2="545.0" stroke="#ffffff" stroke-width="2.2" stroke-dasharray="5,2"/>
+  <line x1="279.0" y1="417" x2="279.0" y2="507.5" stroke="#ffffff" stroke-width="1.3" opacity="0.85"/>
+  <line x1="279.0" y1="582.5" x2="279.0" y2="673" stroke="#ffffff" stroke-width="1.3" opacity="0.85"/>
+  <text x="279.0" y="455" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle">SÂN 06</text>
+  <text x="279.0" y="663" fill="#e2e8f0" font-size="9" text-anchor="middle">6,10×13,41m</text>
 </g>
 <g id="court_07">
-  <rect x="208" y="411" width="122" height="268" fill="url(#courtBlueA)" stroke="#f8fafc" stroke-width="2.5" rx="2"/>
-  <rect x="214" y="507.5" width="110" height="75.0" fill="url(#kitchenOrange)" stroke="#ffffff" stroke-width="1.5"/>
-  <line x1="204" y1="545.0" x2="334" y2="545.0" stroke="#ffffff" stroke-width="2.2" stroke-dasharray="5,2"/>
-  <line x1="269.0" y1="417" x2="269.0" y2="507.5" stroke="#ffffff" stroke-width="1.3" opacity="0.85"/>
-  <line x1="269.0" y1="582.5" x2="269.0" y2="673" stroke="#ffffff" stroke-width="1.3" opacity="0.85"/>
-  <text x="269.0" y="455" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle">SÂN 07</text>
-  <text x="269.0" y="663" fill="#e2e8f0" font-size="9" text-anchor="middle">6,10×13,41m</text>
+  <rect x="356" y="411" width="122" height="268" fill="url(#courtBlueA)" stroke="#f8fafc" stroke-width="2.5" rx="2"/>
+  <rect x="362" y="507.5" width="110" height="75.0" fill="url(#kitchenOrange)" stroke="#ffffff" stroke-width="1.5"/>
+  <line x1="352" y1="545.0" x2="482" y2="545.0" stroke="#ffffff" stroke-width="2.2" stroke-dasharray="5,2"/>
+  <line x1="417.0" y1="417" x2="417.0" y2="507.5" stroke="#ffffff" stroke-width="1.3" opacity="0.85"/>
+  <line x1="417.0" y1="582.5" x2="417.0" y2="673" stroke="#ffffff" stroke-width="1.3" opacity="0.85"/>
+  <text x="417.0" y="455" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle">SÂN 07</text>
+  <text x="417.0" y="663" fill="#e2e8f0" font-size="9" text-anchor="middle">6,10×13,41m</text>
 </g>
 <g id="court_08">
-  <rect x="346" y="411" width="122" height="268" fill="url(#courtBlueB)" stroke="#f8fafc" stroke-width="2.5" rx="2"/>
-  <rect x="352" y="507.5" width="110" height="75.0" fill="url(#kitchenOrange)" stroke="#ffffff" stroke-width="1.5"/>
-  <line x1="342" y1="545.0" x2="472" y2="545.0" stroke="#ffffff" stroke-width="2.2" stroke-dasharray="5,2"/>
-  <line x1="407.0" y1="417" x2="407.0" y2="507.5" stroke="#ffffff" stroke-width="1.3" opacity="0.85"/>
-  <line x1="407.0" y1="582.5" x2="407.0" y2="673" stroke="#ffffff" stroke-width="1.3" opacity="0.85"/>
-  <text x="407.0" y="455" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle">SÂN 08</text>
-  <text x="407.0" y="663" fill="#e2e8f0" font-size="9" text-anchor="middle">6,10×13,41m</text>
+  <rect x="494" y="411" width="122" height="268" fill="url(#courtBlueB)" stroke="#f8fafc" stroke-width="2.5" rx="2"/>
+  <rect x="500" y="507.5" width="110" height="75.0" fill="url(#kitchenOrange)" stroke="#ffffff" stroke-width="1.5"/>
+  <line x1="490" y1="545.0" x2="620" y2="545.0" stroke="#ffffff" stroke-width="2.2" stroke-dasharray="5,2"/>
+  <line x1="555.0" y1="417" x2="555.0" y2="507.5" stroke="#ffffff" stroke-width="1.3" opacity="0.85"/>
+  <line x1="555.0" y1="582.5" x2="555.0" y2="673" stroke="#ffffff" stroke-width="1.3" opacity="0.85"/>
+  <text x="555.0" y="455" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle">SÂN 08</text>
+  <text x="555.0" y="663" fill="#e2e8f0" font-size="9" text-anchor="middle">6,10×13,41m</text>
 </g>
 <g id="court_09">
-  <rect x="484" y="411" width="122" height="268" fill="url(#courtBlueA)" stroke="#f8fafc" stroke-width="2.5" rx="2"/>
-  <rect x="490" y="507.5" width="110" height="75.0" fill="url(#kitchenOrange)" stroke="#ffffff" stroke-width="1.5"/>
-  <line x1="480" y1="545.0" x2="610" y2="545.0" stroke="#ffffff" stroke-width="2.2" stroke-dasharray="5,2"/>
-  <line x1="545.0" y1="417" x2="545.0" y2="507.5" stroke="#ffffff" stroke-width="1.3" opacity="0.85"/>
-  <line x1="545.0" y1="582.5" x2="545.0" y2="673" stroke="#ffffff" stroke-width="1.3" opacity="0.85"/>
-  <text x="545.0" y="455" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle">SÂN 09</text>
-  <text x="545.0" y="663" fill="#e2e8f0" font-size="9" text-anchor="middle">6,10×13,41m</text>
+  <rect x="632" y="411" width="122" height="268" fill="url(#courtBlueA)" stroke="#f8fafc" stroke-width="2.5" rx="2"/>
+  <rect x="638" y="507.5" width="110" height="75.0" fill="url(#kitchenOrange)" stroke="#ffffff" stroke-width="1.5"/>
+  <line x1="628" y1="545.0" x2="758" y2="545.0" stroke="#ffffff" stroke-width="2.2" stroke-dasharray="5,2"/>
+  <line x1="693.0" y1="417" x2="693.0" y2="507.5" stroke="#ffffff" stroke-width="1.3" opacity="0.85"/>
+  <line x1="693.0" y1="582.5" x2="693.0" y2="673" stroke="#ffffff" stroke-width="1.3" opacity="0.85"/>
+  <text x="693.0" y="455" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle">SÂN 09</text>
+  <text x="693.0" y="663" fill="#e2e8f0" font-size="9" text-anchor="middle">6,10×13,41m</text>
 </g>
 <g id="court_10">
-  <rect x="622" y="411" width="122" height="268" fill="url(#courtBlueB)" stroke="#f8fafc" stroke-width="2.5" rx="2"/>
-  <rect x="628" y="507.5" width="110" height="75.0" fill="url(#kitchenOrange)" stroke="#ffffff" stroke-width="1.5"/>
-  <line x1="618" y1="545.0" x2="748" y2="545.0" stroke="#ffffff" stroke-width="2.2" stroke-dasharray="5,2"/>
-  <line x1="683.0" y1="417" x2="683.0" y2="507.5" stroke="#ffffff" stroke-width="1.3" opacity="0.85"/>
-  <line x1="683.0" y1="582.5" x2="683.0" y2="673" stroke="#ffffff" stroke-width="1.3" opacity="0.85"/>
-  <text x="683.0" y="455" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle">SÂN 10</text>
-  <text x="683.0" y="663" fill="#e2e8f0" font-size="9" text-anchor="middle">6,10×13,41m</text>
+  <rect x="770" y="411" width="122" height="268" fill="url(#courtBlueB)" stroke="#f8fafc" stroke-width="2.5" rx="2"/>
+  <rect x="776" y="507.5" width="110" height="75.0" fill="url(#kitchenOrange)" stroke="#ffffff" stroke-width="1.5"/>
+  <line x1="766" y1="545.0" x2="896" y2="545.0" stroke="#ffffff" stroke-width="2.2" stroke-dasharray="5,2"/>
+  <line x1="831.0" y1="417" x2="831.0" y2="507.5" stroke="#ffffff" stroke-width="1.3" opacity="0.85"/>
+  <line x1="831.0" y1="582.5" x2="831.0" y2="673" stroke="#ffffff" stroke-width="1.3" opacity="0.85"/>
+  <text x="831.0" y="455" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle">SÂN 10</text>
+  <text x="831.0" y="663" fill="#e2e8f0" font-size="9" text-anchor="middle">6,10×13,41m</text>
 </g>
-<rect x="782" y="75" width="122" height="268" fill="#0f172a" stroke="#38bdf8" stroke-width="2.5" rx="4"/>
-<text x="843.0" y="95" fill="#7dd3fc" font-size="10.5" font-weight="bold" text-anchor="middle">PHÒNG ĐIỀU KHIỂN</text>
-<rect x="70" y="707" width="674" height="148" fill="#1e293b" stroke="#94a3b8" stroke-width="2" rx="4"/>
-<text x="86" y="727" fill="#cbd5e1" font-size="11" font-weight="bold">CỔNG VÀO &amp; BÃI ĐỖ XE</text>
-<rect x="340" y="753" width="36" height="76" fill="#0f172a" stroke="#facc15" stroke-width="1.2" stroke-dasharray="4,3" rx="2"/>
-<rect x="386" y="753" width="36" height="76" fill="#0f172a" stroke="#facc15" stroke-width="1.2" stroke-dasharray="4,3" rx="2"/>
-<rect x="432" y="753" width="36" height="76" fill="#0f172a" stroke="#facc15" stroke-width="1.2" stroke-dasharray="4,3" rx="2"/>
-<rect x="478" y="753" width="36" height="76" fill="#0f172a" stroke="#facc15" stroke-width="1.2" stroke-dasharray="4,3" rx="2"/>
-<rect x="524" y="753" width="36" height="76" fill="#0f172a" stroke="#facc15" stroke-width="1.2" stroke-dasharray="4,3" rx="2"/>
-<rect x="570" y="753" width="36" height="76" fill="#0f172a" stroke="#facc15" stroke-width="1.2" stroke-dasharray="4,3" rx="2"/>
-<rect x="616" y="753" width="36" height="76" fill="#0f172a" stroke="#facc15" stroke-width="1.2" stroke-dasharray="4,3" rx="2"/>
-<rect x="662" y="753" width="36" height="76" fill="#0f172a" stroke="#facc15" stroke-width="1.2" stroke-dasharray="4,3" rx="2"/>
-<line x1="70" y1="57" x2="843" y2="57" stroke="#ef4444" stroke-width="2.5" opacity="0.8"/>
-<line x1="70" y1="365" x2="843" y2="365" stroke="#ef4444" stroke-width="2.5" opacity="0.8"/>
-<line x1="843" y1="57" x2="843" y2="240" stroke="#ef4444" stroke-width="2.5" opacity="0.8"/>
-<line x1="843" y1="365" x2="843" y2="240" stroke="#ef4444" stroke-width="2.5" opacity="0.8"/>
-<polyline points="100,101 100,57 843,57" fill="none" stroke="#ef4444" stroke-width="1.3" opacity="0.65"/>
-<polyline points="162,317 162,57 843,57" fill="none" stroke="#ef4444" stroke-width="1.3" opacity="0.65"/>
-<polyline points="238,101 238,57 843,57" fill="none" stroke="#ef4444" stroke-width="1.3" opacity="0.65"/>
-<polyline points="300,317 300,57 843,57" fill="none" stroke="#ef4444" stroke-width="1.3" opacity="0.65"/>
-<polyline points="376,101 376,57 843,57" fill="none" stroke="#ef4444" stroke-width="1.3" opacity="0.65"/>
-<polyline points="438,317 438,57 843,57" fill="none" stroke="#ef4444" stroke-width="1.3" opacity="0.65"/>
-<polyline points="514,101 514,57 843,57" fill="none" stroke="#ef4444" stroke-width="1.3" opacity="0.65"/>
-<polyline points="576,317 576,57 843,57" fill="none" stroke="#ef4444" stroke-width="1.3" opacity="0.65"/>
-<polyline points="652,101 652,57 843,57" fill="none" stroke="#ef4444" stroke-width="1.3" opacity="0.65"/>
-<polyline points="714,317 714,57 843,57" fill="none" stroke="#ef4444" stroke-width="1.3" opacity="0.65"/>
-<polyline points="100,437 100,365 843,365" fill="none" stroke="#ef4444" stroke-width="1.3" opacity="0.65"/>
-<polyline points="162,653 162,365 843,365" fill="none" stroke="#ef4444" stroke-width="1.3" opacity="0.65"/>
-<polyline points="238,437 238,365 843,365" fill="none" stroke="#ef4444" stroke-width="1.3" opacity="0.65"/>
-<polyline points="300,653 300,365 843,365" fill="none" stroke="#ef4444" stroke-width="1.3" opacity="0.65"/>
-<polyline points="376,437 376,365 843,365" fill="none" stroke="#ef4444" stroke-width="1.3" opacity="0.65"/>
-<polyline points="438,653 438,365 843,365" fill="none" stroke="#ef4444" stroke-width="1.3" opacity="0.65"/>
-<polyline points="514,437 514,365 843,365" fill="none" stroke="#ef4444" stroke-width="1.3" opacity="0.65"/>
-<polyline points="576,653 576,365 843,365" fill="none" stroke="#ef4444" stroke-width="1.3" opacity="0.65"/>
-<polyline points="652,437 652,365 843,365" fill="none" stroke="#ef4444" stroke-width="1.3" opacity="0.65"/>
-<polyline points="714,653 714,365 843,365" fill="none" stroke="#ef4444" stroke-width="1.3" opacity="0.65"/>
-<polyline points="102,787 102,365 843,365" fill="none" stroke="#ef4444" stroke-width="1.3" opacity="0.65"/>
-<polyline points="256,741 256,365 843,365" fill="none" stroke="#ef4444" stroke-width="1.3" opacity="0.65"/>
-<polyline points="876,281 876,57 843,57" fill="none" stroke="#ef4444" stroke-width="1.3" opacity="0.65"/>
-<polyline points="946,115 946,57 843,57" fill="none" stroke="#ef4444" stroke-width="1.3" opacity="0.65"/>
-<polyline points="843,185 843,310" fill="none" stroke="#3b82f6" stroke-width="2.2"/>
-<polyline points="843,130 981,130 981,219" fill="none" stroke="#3b82f6" stroke-width="2.2"/>
+<rect x="80" y="411" width="122" height="268" fill="#0f172a" stroke="#38bdf8" stroke-width="2.5" rx="4"/>
+<text x="141.0" y="431" fill="#7dd3fc" font-size="10.5" font-weight="bold" text-anchor="middle">PHÒNG ĐIỀU KHIỂN</text>
+<rect x="80" y="707" width="812" height="148" fill="#1e293b" stroke="#94a3b8" stroke-width="2" rx="4"/>
+<text x="96" y="727" fill="#cbd5e1" font-size="11" font-weight="bold">CỔNG VÀO &amp; BÃI ĐỖ XE</text>
+<rect x="350" y="753" width="38" height="76" fill="#0f172a" stroke="#facc15" stroke-width="1.2" stroke-dasharray="4,3" rx="2"/>
+<rect x="398" y="753" width="38" height="76" fill="#0f172a" stroke="#facc15" stroke-width="1.2" stroke-dasharray="4,3" rx="2"/>
+<rect x="446" y="753" width="38" height="76" fill="#0f172a" stroke="#facc15" stroke-width="1.2" stroke-dasharray="4,3" rx="2"/>
+<rect x="494" y="753" width="38" height="76" fill="#0f172a" stroke="#facc15" stroke-width="1.2" stroke-dasharray="4,3" rx="2"/>
+<rect x="542" y="753" width="38" height="76" fill="#0f172a" stroke="#facc15" stroke-width="1.2" stroke-dasharray="4,3" rx="2"/>
+<rect x="590" y="753" width="38" height="76" fill="#0f172a" stroke="#facc15" stroke-width="1.2" stroke-dasharray="4,3" rx="2"/>
+<rect x="638" y="753" width="38" height="76" fill="#0f172a" stroke="#facc15" stroke-width="1.2" stroke-dasharray="4,3" rx="2"/>
+<rect x="686" y="753" width="38" height="76" fill="#0f172a" stroke="#facc15" stroke-width="1.2" stroke-dasharray="4,3" rx="2"/>
+<rect x="734" y="753" width="38" height="76" fill="#0f172a" stroke="#facc15" stroke-width="1.2" stroke-dasharray="4,3" rx="2"/>
+<rect x="782" y="753" width="38" height="76" fill="#0f172a" stroke="#facc15" stroke-width="1.2" stroke-dasharray="4,3" rx="2"/>
+<line x1="80" y1="59" x2="770" y2="59" stroke="#ef4444" stroke-width="2.5" opacity="0.8"/>
+<line x1="80" y1="365" x2="892" y2="365" stroke="#ef4444" stroke-width="2.5" opacity="0.8"/>
+<line x1="64" y1="59" x2="64" y2="560" stroke="#ef4444" stroke-width="2.2" opacity="0.8"/>
+<line x1="64" y1="560" x2="141" y2="560" stroke="#ef4444" stroke-width="2.2" opacity="0.8"/>
+<line x1="70" y1="365" x2="70" y2="560" stroke="#ef4444" stroke-width="2.2" opacity="0.8"/>
+<polyline points="110,101 110,59 66,59" fill="none" stroke="#ef4444" stroke-width="1.3" opacity="0.65"/>
+<polyline points="172,317 172,59 66,59" fill="none" stroke="#ef4444" stroke-width="1.3" opacity="0.65"/>
+<polyline points="248,101 248,59 66,59" fill="none" stroke="#ef4444" stroke-width="1.3" opacity="0.65"/>
+<polyline points="310,317 310,59 66,59" fill="none" stroke="#ef4444" stroke-width="1.3" opacity="0.65"/>
+<polyline points="386,101 386,59 66,59" fill="none" stroke="#ef4444" stroke-width="1.3" opacity="0.65"/>
+<polyline points="448,317 448,59 66,59" fill="none" stroke="#ef4444" stroke-width="1.3" opacity="0.65"/>
+<polyline points="524,101 524,59 66,59" fill="none" stroke="#ef4444" stroke-width="1.3" opacity="0.65"/>
+<polyline points="586,317 586,59 66,59" fill="none" stroke="#ef4444" stroke-width="1.3" opacity="0.65"/>
+<polyline points="662,101 662,59 66,59" fill="none" stroke="#ef4444" stroke-width="1.3" opacity="0.65"/>
+<polyline points="724,317 724,59 66,59" fill="none" stroke="#ef4444" stroke-width="1.3" opacity="0.65"/>
+<polyline points="248,437 248,365 66,365" fill="none" stroke="#ef4444" stroke-width="1.3" opacity="0.65"/>
+<polyline points="310,653 310,365 66,365" fill="none" stroke="#ef4444" stroke-width="1.3" opacity="0.65"/>
+<polyline points="386,437 386,365 66,365" fill="none" stroke="#ef4444" stroke-width="1.3" opacity="0.65"/>
+<polyline points="448,653 448,365 66,365" fill="none" stroke="#ef4444" stroke-width="1.3" opacity="0.65"/>
+<polyline points="524,437 524,365 66,365" fill="none" stroke="#ef4444" stroke-width="1.3" opacity="0.65"/>
+<polyline points="586,653 586,365 66,365" fill="none" stroke="#ef4444" stroke-width="1.3" opacity="0.65"/>
+<polyline points="662,437 662,365 66,365" fill="none" stroke="#ef4444" stroke-width="1.3" opacity="0.65"/>
+<polyline points="724,653 724,365 66,365" fill="none" stroke="#ef4444" stroke-width="1.3" opacity="0.65"/>
+<polyline points="800,437 800,365 66,365" fill="none" stroke="#ef4444" stroke-width="1.3" opacity="0.65"/>
+<polyline points="862,653 862,365 66,365" fill="none" stroke="#ef4444" stroke-width="1.3" opacity="0.65"/>
+<polyline points="114,787 114,365 66,365" fill="none" stroke="#ef4444" stroke-width="1.3" opacity="0.65"/>
+<polyline points="293,741 293,365 66,365" fill="none" stroke="#ef4444" stroke-width="1.3" opacity="0.65"/>
+<polyline points="141,512 141,607" fill="none" stroke="#3b82f6" stroke-width="2.2"/>
+<polyline points="141,464 141,49 973,49 973,215" fill="none" stroke="#3b82f6" stroke-width="2.2"/>
 <g>
-  <rect x="798" y="109" width="90" height="42" fill="#334155" stroke="#94a3b8" stroke-width="1.6" rx="4"/>
-  <text x="843.0" y="134.0" fill="#ffffff" font-size="9.5" font-weight="bold" text-anchor="middle">Máy tính (PC)</text>
-</g>
-<g>
-  <rect x="798" y="165" width="90" height="40" fill="#ea580c" stroke="#fdba74" stroke-width="1.6" rx="4"/>
-  <text x="843.0" y="189.0" fill="#ffffff" font-size="9.5" font-weight="bold" text-anchor="middle">Đầu ghi NVR</text>
+  <rect x="96" y="445" width="90" height="38" fill="#334155" stroke="#94a3b8" stroke-width="1.6" rx="4"/>
+  <text x="141.0" y="468.0" fill="#ffffff" font-size="9.5" font-weight="bold" text-anchor="middle">Máy tính (PC)</text>
 </g>
 <g>
-  <rect x="798" y="219" width="90" height="42" fill="#0284c7" stroke="#7dd3fc" stroke-width="1.6" rx="4"/>
-  <text x="843.0" y="244.0" fill="#ffffff" font-size="9.5" font-weight="bold" text-anchor="middle">Switch PoE</text>
+  <rect x="96" y="493" width="90" height="38" fill="#ea580c" stroke="#fdba74" stroke-width="1.6" rx="4"/>
+  <text x="141.0" y="516.0" fill="#ffffff" font-size="9.5" font-weight="bold" text-anchor="middle">Đầu ghi NVR</text>
 </g>
 <g>
-  <rect x="798" y="291" width="90" height="38" fill="#2563eb" stroke="#93c5fd" stroke-width="1.6" rx="4"/>
-  <text x="843.0" y="314.0" fill="#ffffff" font-size="9.5" font-weight="bold" text-anchor="middle">Màn hình nhỏ</text>
+  <rect x="96" y="541" width="90" height="38" fill="#0284c7" stroke="#7dd3fc" stroke-width="1.6" rx="4"/>
+  <text x="141.0" y="564.0" fill="#ffffff" font-size="9.5" font-weight="bold" text-anchor="middle">Switch PoE</text>
 </g>
 <g>
-  <rect x="928" y="219" width="106" height="48" fill="#1d4ed8" stroke="#60a5fa" stroke-width="1.6" rx="4"/>
-  <text x="981.0" y="247.0" fill="#ffffff" font-size="9.5" font-weight="bold" text-anchor="middle">Màn hình lớn</text>
+  <rect x="96" y="589" width="90" height="36" fill="#2563eb" stroke="#93c5fd" stroke-width="1.6" rx="4"/>
+  <text x="141.0" y="611.0" fill="#ffffff" font-size="9.5" font-weight="bold" text-anchor="middle">Màn hình nhỏ</text>
 </g>
 <g>
-  <rect x="82" y="85" width="36" height="32" fill="#f59e0b" stroke="#fde68a" stroke-width="1.6" rx="4"/>
-  <circle cx="100.0" cy="101.0" r="5" fill="#fef08a"/>
+  <rect x="920" y="215" width="106" height="48" fill="#1d4ed8" stroke="#60a5fa" stroke-width="1.6" rx="4"/>
+  <text x="973.0" y="243.0" fill="#ffffff" font-size="9.5" font-weight="bold" text-anchor="middle">Màn hình lớn</text>
 </g>
 <g>
-  <rect x="144" y="301" width="36" height="32" fill="#f59e0b" stroke="#fde68a" stroke-width="1.6" rx="4"/>
-  <circle cx="162.0" cy="317.0" r="5" fill="#fef08a"/>
+  <rect x="92" y="85" width="36" height="32" fill="#f59e0b" stroke="#fde68a" stroke-width="1.6" rx="4"/>
+  <circle cx="110.0" cy="101.0" r="5" fill="#fef08a"/>
 </g>
 <g>
-  <rect x="220" y="85" width="36" height="32" fill="#f59e0b" stroke="#fde68a" stroke-width="1.6" rx="4"/>
-  <circle cx="238.0" cy="101.0" r="5" fill="#fef08a"/>
+  <rect x="154" y="301" width="36" height="32" fill="#f59e0b" stroke="#fde68a" stroke-width="1.6" rx="4"/>
+  <circle cx="172.0" cy="317.0" r="5" fill="#fef08a"/>
 </g>
 <g>
-  <rect x="282" y="301" width="36" height="32" fill="#f59e0b" stroke="#fde68a" stroke-width="1.6" rx="4"/>
-  <circle cx="300.0" cy="317.0" r="5" fill="#fef08a"/>
+  <rect x="230" y="85" width="36" height="32" fill="#f59e0b" stroke="#fde68a" stroke-width="1.6" rx="4"/>
+  <circle cx="248.0" cy="101.0" r="5" fill="#fef08a"/>
 </g>
 <g>
-  <rect x="358" y="85" width="36" height="32" fill="#f59e0b" stroke="#fde68a" stroke-width="1.6" rx="4"/>
-  <circle cx="376.0" cy="101.0" r="5" fill="#fef08a"/>
+  <rect x="292" y="301" width="36" height="32" fill="#f59e0b" stroke="#fde68a" stroke-width="1.6" rx="4"/>
+  <circle cx="310.0" cy="317.0" r="5" fill="#fef08a"/>
 </g>
 <g>
-  <rect x="420" y="301" width="36" height="32" fill="#f59e0b" stroke="#fde68a" stroke-width="1.6" rx="4"/>
-  <circle cx="438.0" cy="317.0" r="5" fill="#fef08a"/>
+  <rect x="368" y="85" width="36" height="32" fill="#f59e0b" stroke="#fde68a" stroke-width="1.6" rx="4"/>
+  <circle cx="386.0" cy="101.0" r="5" fill="#fef08a"/>
 </g>
 <g>
-  <rect x="496" y="85" width="36" height="32" fill="#f59e0b" stroke="#fde68a" stroke-width="1.6" rx="4"/>
-  <circle cx="514.0" cy="101.0" r="5" fill="#fef08a"/>
+  <rect x="430" y="301" width="36" height="32" fill="#f59e0b" stroke="#fde68a" stroke-width="1.6" rx="4"/>
+  <circle cx="448.0" cy="317.0" r="5" fill="#fef08a"/>
 </g>
 <g>
-  <rect x="558" y="301" width="36" height="32" fill="#f59e0b" stroke="#fde68a" stroke-width="1.6" rx="4"/>
-  <circle cx="576.0" cy="317.0" r="5" fill="#fef08a"/>
+  <rect x="506" y="85" width="36" height="32" fill="#f59e0b" stroke="#fde68a" stroke-width="1.6" rx="4"/>
+  <circle cx="524.0" cy="101.0" r="5" fill="#fef08a"/>
 </g>
 <g>
-  <rect x="634" y="85" width="36" height="32" fill="#f59e0b" stroke="#fde68a" stroke-width="1.6" rx="4"/>
-  <circle cx="652.0" cy="101.0" r="5" fill="#fef08a"/>
+  <rect x="568" y="301" width="36" height="32" fill="#f59e0b" stroke="#fde68a" stroke-width="1.6" rx="4"/>
+  <circle cx="586.0" cy="317.0" r="5" fill="#fef08a"/>
 </g>
 <g>
-  <rect x="696" y="301" width="36" height="32" fill="#f59e0b" stroke="#fde68a" stroke-width="1.6" rx="4"/>
-  <circle cx="714.0" cy="317.0" r="5" fill="#fef08a"/>
+  <rect x="644" y="85" width="36" height="32" fill="#f59e0b" stroke="#fde68a" stroke-width="1.6" rx="4"/>
+  <circle cx="662.0" cy="101.0" r="5" fill="#fef08a"/>
 </g>
 <g>
-  <rect x="82" y="421" width="36" height="32" fill="#f59e0b" stroke="#fde68a" stroke-width="1.6" rx="4"/>
-  <circle cx="100.0" cy="437.0" r="5" fill="#fef08a"/>
+  <rect x="706" y="301" width="36" height="32" fill="#f59e0b" stroke="#fde68a" stroke-width="1.6" rx="4"/>
+  <circle cx="724.0" cy="317.0" r="5" fill="#fef08a"/>
 </g>
 <g>
-  <rect x="144" y="637" width="36" height="32" fill="#f59e0b" stroke="#fde68a" stroke-width="1.6" rx="4"/>
-  <circle cx="162.0" cy="653.0" r="5" fill="#fef08a"/>
+  <rect x="230" y="421" width="36" height="32" fill="#f59e0b" stroke="#fde68a" stroke-width="1.6" rx="4"/>
+  <circle cx="248.0" cy="437.0" r="5" fill="#fef08a"/>
 </g>
 <g>
-  <rect x="220" y="421" width="36" height="32" fill="#f59e0b" stroke="#fde68a" stroke-width="1.6" rx="4"/>
-  <circle cx="238.0" cy="437.0" r="5" fill="#fef08a"/>
+  <rect x="292" y="637" width="36" height="32" fill="#f59e0b" stroke="#fde68a" stroke-width="1.6" rx="4"/>
+  <circle cx="310.0" cy="653.0" r="5" fill="#fef08a"/>
 </g>
 <g>
-  <rect x="282" y="637" width="36" height="32" fill="#f59e0b" stroke="#fde68a" stroke-width="1.6" rx="4"/>
-  <circle cx="300.0" cy="653.0" r="5" fill="#fef08a"/>
+  <rect x="368" y="421" width="36" height="32" fill="#f59e0b" stroke="#fde68a" stroke-width="1.6" rx="4"/>
+  <circle cx="386.0" cy="437.0" r="5" fill="#fef08a"/>
 </g>
 <g>
-  <rect x="358" y="421" width="36" height="32" fill="#f59e0b" stroke="#fde68a" stroke-width="1.6" rx="4"/>
-  <circle cx="376.0" cy="437.0" r="5" fill="#fef08a"/>
+  <rect x="430" y="637" width="36" height="32" fill="#f59e0b" stroke="#fde68a" stroke-width="1.6" rx="4"/>
+  <circle cx="448.0" cy="653.0" r="5" fill="#fef08a"/>
 </g>
 <g>
-  <rect x="420" y="637" width="36" height="32" fill="#f59e0b" stroke="#fde68a" stroke-width="1.6" rx="4"/>
-  <circle cx="438.0" cy="653.0" r="5" fill="#fef08a"/>
+  <rect x="506" y="421" width="36" height="32" fill="#f59e0b" stroke="#fde68a" stroke-width="1.6" rx="4"/>
+  <circle cx="524.0" cy="437.0" r="5" fill="#fef08a"/>
 </g>
 <g>
-  <rect x="496" y="421" width="36" height="32" fill="#f59e0b" stroke="#fde68a" stroke-width="1.6" rx="4"/>
-  <circle cx="514.0" cy="437.0" r="5" fill="#fef08a"/>
+  <rect x="568" y="637" width="36" height="32" fill="#f59e0b" stroke="#fde68a" stroke-width="1.6" rx="4"/>
+  <circle cx="586.0" cy="653.0" r="5" fill="#fef08a"/>
 </g>
 <g>
-  <rect x="558" y="637" width="36" height="32" fill="#f59e0b" stroke="#fde68a" stroke-width="1.6" rx="4"/>
-  <circle cx="576.0" cy="653.0" r="5" fill="#fef08a"/>
+  <rect x="644" y="421" width="36" height="32" fill="#f59e0b" stroke="#fde68a" stroke-width="1.6" rx="4"/>
+  <circle cx="662.0" cy="437.0" r="5" fill="#fef08a"/>
 </g>
 <g>
-  <rect x="634" y="421" width="36" height="32" fill="#f59e0b" stroke="#fde68a" stroke-width="1.6" rx="4"/>
-  <circle cx="652.0" cy="437.0" r="5" fill="#fef08a"/>
+  <rect x="706" y="637" width="36" height="32" fill="#f59e0b" stroke="#fde68a" stroke-width="1.6" rx="4"/>
+  <circle cx="724.0" cy="653.0" r="5" fill="#fef08a"/>
 </g>
 <g>
-  <rect x="696" y="637" width="36" height="32" fill="#f59e0b" stroke="#fde68a" stroke-width="1.6" rx="4"/>
-  <circle cx="714.0" cy="653.0" r="5" fill="#fef08a"/>
+  <rect x="782" y="421" width="36" height="32" fill="#f59e0b" stroke="#fde68a" stroke-width="1.6" rx="4"/>
+  <circle cx="800.0" cy="437.0" r="5" fill="#fef08a"/>
 </g>
 <g>
-  <rect x="84" y="771" width="36" height="32" fill="#f59e0b" stroke="#fde68a" stroke-width="1.6" rx="4"/>
-  <circle cx="102.0" cy="787.0" r="5" fill="#fef08a"/>
+  <rect x="844" y="637" width="36" height="32" fill="#f59e0b" stroke="#fde68a" stroke-width="1.6" rx="4"/>
+  <circle cx="862.0" cy="653.0" r="5" fill="#fef08a"/>
 </g>
 <g>
-  <rect x="238" y="725" width="36" height="32" fill="#f59e0b" stroke="#fde68a" stroke-width="1.6" rx="4"/>
-  <circle cx="256.0" cy="741.0" r="5" fill="#fef08a"/>
+  <rect x="96" y="771" width="36" height="32" fill="#f59e0b" stroke="#fde68a" stroke-width="1.6" rx="4"/>
+  <circle cx="114.0" cy="787.0" r="5" fill="#fef08a"/>
 </g>
 <g>
-  <rect x="858" y="265" width="36" height="32" fill="#f59e0b" stroke="#fde68a" stroke-width="1.6" rx="4"/>
-  <circle cx="876.0" cy="281.0" r="5" fill="#fef08a"/>
+  <rect x="275" y="725" width="36" height="32" fill="#f59e0b" stroke="#fde68a" stroke-width="1.6" rx="4"/>
+  <circle cx="293.0" cy="741.0" r="5" fill="#fef08a"/>
 </g>
 <g>
-  <rect x="928" y="99" width="36" height="32" fill="#f59e0b" stroke="#fde68a" stroke-width="1.6" rx="4"/>
-  <circle cx="946.0" cy="115.0" r="5" fill="#fef08a"/>
+  <rect x="154" y="635" width="36" height="32" fill="#f59e0b" stroke="#fde68a" stroke-width="1.6" rx="4"/>
+  <circle cx="172.0" cy="651.0" r="5" fill="#fef08a"/>
 </g>
-<rect x="782" y="360" width="240" height="176" fill="#0f172a" stroke="#475569" stroke-width="1.5" rx="6"/>
-<text x="796" y="382" fill="#f8fafc" font-size="11" font-weight="bold">CHÚ THÍCH HẠ TẦNG</text>
-<circle cx="804" cy="404" r="6" fill="#f59e0b"/><text x="818" y="408" fill="#e2e8f0" font-size="10">Camera IP PoE (20 sân + 2 cổng/xe + 2 ĐK)</text>
-<rect x="798" y="420" width="12" height="10" fill="#0284c7" rx="2"/><text x="818" y="429" fill="#e2e8f0" font-size="10">Switch PoE / NVR / PC Điều khiển</text>
-<rect x="798" y="440" width="12" height="10" fill="#1d4ed8" rx="2"/><text x="818" y="449" fill="#e2e8f0" font-size="10">Màn hình nhỏ (trong) &amp; Màn hình lớn (ngoài)</text>
-<line x1="798" y1="470" x2="812" y2="470" stroke="#ef4444" stroke-width="2.5"/><text x="818" y="474" fill="#fca5a5" font-size="10">Cáp mạng Camera PoE (Treo trên cao)</text>
-<line x1="798" y1="492" x2="812" y2="492" stroke="#3b82f6" stroke-width="2.5"/><text x="818" y="496" fill="#93c5fd" font-size="10">Cáp dữ liệu &amp; Màn hình (Treo trên cao)</text>
-<text x="796" y="520" fill="#94a3b8" font-size="9.5">Sân: 6,10m × 13,41m | VLAN 40 (192.168.40.0/24)</text>
+<g>
+  <rect x="94" y="635" width="36" height="32" fill="#f59e0b" stroke="#fde68a" stroke-width="1.6" rx="4"/>
+  <circle cx="112.0" cy="651.0" r="5" fill="#fef08a"/>
+</g>
+<rect x="780" y="120" width="248" height="176" fill="#0f172a" stroke="#475569" stroke-width="1.5" rx="6"/>
+<text x="794" y="142" fill="#f8fafc" font-size="11" font-weight="bold">CHÚ THÍCH HẠ TẦNG</text>
+<circle cx="802" cy="164" r="6" fill="#f59e0b"/><text x="816" y="168" fill="#e2e8f0" font-size="10">Camera IP PoE (20 sân + 2 cổng/xe + 2 ĐK)</text>
+<rect x="796" y="180" width="12" height="10" fill="#0284c7" rx="2"/><text x="816" y="189" fill="#e2e8f0" font-size="10">Switch PoE / NVR / PC Điều khiển</text>
+<rect x="796" y="200" width="12" height="10" fill="#1d4ed8" rx="2"/><text x="816" y="209" fill="#e2e8f0" font-size="10">Màn hình nhỏ (trong) &amp; Màn hình lớn (ngoài)</text>
+<line x1="796" y1="230" x2="810" y2="230" stroke="#ef4444" stroke-width="2.5"/><text x="816" y="234" fill="#fca5a5" font-size="10">Cáp mạng Camera PoE (Treo trên cao)</text>
+<line x1="796" y1="252" x2="810" y2="252" stroke="#3b82f6" stroke-width="2.5"/><text x="816" y="256" fill="#93c5fd" font-size="10">Cáp dữ liệu &amp; Màn hình (Treo trên cao)</text>
+<text x="794" y="280" fill="#94a3b8" font-size="9.5">Sân: 6,10m × 13,41m | VLAN 40 (192.168.40.0/24)</text>
 </svg>
